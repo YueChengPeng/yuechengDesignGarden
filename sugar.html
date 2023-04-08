@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="resources/img/tabIcon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- outline Import CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/outline.css">
+    <!-- outline Import the library -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/DocumentOutline.js"></script> -->
+    <script src="js/DocumentOutline.js"></script>
+
+
+    <title>48°C SUGAR</title>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <link href="css/style_white.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="margin: 0 4rem 0 4rem;">
+    <script src="js/iconDraw.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <!-- header -->
+    <div id="headerStyle" style="display: flex; justify-content: space-between; position: sticky; top: 0; background: rgba(38, 38, 38, 0.6);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+    z-index: 99;">
+        <!-- icon & name -->
+        <div style="display: flex; align-items: center; margin: 0 0 0 0.5rem;">
+            <div id="headerIcon"></div>
+            <p class="headerP headerColorChange" style="margin: 0; color: rgba(255, 255, 255, 0.92);">Yuecheng Peng</p>
+        </div>
+
+        <!-- pages -->
+        <div style="display: flex; align-items: center; margin: 0 0.5rem 0 0">
+            <div class="headerBorder" style="border-right: 1px solid white; ">
+                <a class="headerPageP cannotselect headerColorChange" href="home.html"
+                    style="color: rgba(255, 255, 255, 0.92);"> Yuecheng's Garden of Design</a>
+            </div>
+            <!-- <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect">Grad Works</a>
+            </div> -->
+            <div>
+                <a class="headerPageP cannotselect headerColorChange" href="aboutme.html" target="_self"
+                    style="color: rgba(255, 255, 255, 0.92);">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="introLight" style="position: absolute; margin: 18rem 10rem 0rem 10rem;">
+        <div class="row">
+            <div class="col-9" style="padding-right: 4rem;">
+                <p class="introH1" style="margin-bottom: 2rem;">Hey! It's dark here!</p>
+                <p class="introH3">And so does the future of many <span>traditional Chinese
+                        folk arts</span>.</p>
+                <p class="introH3">This project is my first attempt to use tech & design to drag these traditions
+                    out of
+                    predicament.
+                </p>
+            </div>
+            <div class="col-3">
+                <div id="lightSvg" style="position: absolute; top: -25rem;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 间隔div -->
+    <div id="blankLight">
+
+    </div>
+
+    <div style="margin: 10rem 20rem 0rem 20rem;">
+        <div style="margin-bottom: 10rem;">
+            <p class="designName" style="color: #e89056;">48°C SUGAR</p>
+            <p class="designName" style="font-size:3rem; margin-bottom: 5rem;">Material Redesign of Traditional Sugar
+                Figure Blowing Art</p>
+            <p>Aug 2022 - Oct 2022</p>
+            <p>Personal project completed at Zhejiang University</p>
+            <p>Advisor: Qicheng Yang</p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>BACKGROUND & PROBLEM</h2>
+            <h3>What is Sugar Figure Blowing Art?</h3>
+            <div class="row" style="  align-items: center;">
+                <div class="col-7">
+                    <p>Sugar Figure Blowing Art is a traditional Chinese folk art with a history of more than 1000
+                        years. Craftsman blow and stretch maltose into different figures after heating it up.</p>
+                </div>
+                <div class="col-5">
+                    <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                        <img src="resources/img/sugar/bg@4x.png" alt="" style="width: 90%;">
+                    </div>
+                </div>
+            </div>
+            <h3>What problem does it face?</h3>
+            <div class="row">
+                <div class="col">
+                    <p>Sugar Figure Blowing Art used to prevail in China, but is declining nowadays.</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/sugar/problem@6x.png" alt="" style="width: 90%;">
+                </div>
+            </div>
+
+            <div>
+                <div style="background-color: #e89056; width: fit-content; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="padding: 0.4rem 1.2rem; margin: 0; color: #fff;">Problem statement</h3>
+                </div>
+                <div
+                    style="border: 0.2rem solid #e89056; border-radius:0 0.6rem 0.6rem 0.6rem; box-shadow: 0 0.2rem 1.4rem rgba(3, 3, 3, 0.1)">
+                    <p style="padding: 1rem 2rem; margin: 0;">How to preserve and revive the Sugar Figure Blowing Art?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>RESEARCH PROCESS</h2>
+            <h3>What is the Main Reason of the Decline?</h3>
+            <p>I collected secondary interview of craftsmen of this art in recent years, and conducted an interview with a
+                craftsman I met on Tiktok.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/research_1@6x.png" alt=""
+                    style="width: 75%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h4>conclusion</h4>
+            <p>This tradition declines because it suffers a loss in customers. Therefore I wanted to find ways to attract
+                more consumers into this tradition.</p>
+            <h3>Who are Potential Consumers of this Art?</h3>
+            <p>I conducted a preliminary interview of 12 people of diverse age groups (12-58) to see their general
+                impression on this art to explore potential customers.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/research_2@6x.png" alt=""
+                    style="width: 75%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h4>conclusion</h4>
+            <p>People aged 18-29 are suitable potential customers of this traditional art.</p>
+            <h3>How to Make this Art Appeal to Them?</h3>
+            <p>To learn more about people aged 18-29, I conducted interviews with 8 people and a survey of 95 people. Then
+                I used these data to build a persona using SPSS.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/research_3@6x.png" alt=""
+                    style="width: 75%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <p>After analysis, I chose <span style="color: #e89056;">group III</span> as the target group and build the
+                persona.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/persona@6x.png" alt=""
+                    style="width: 70%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h4>design opportunity</h4>
+            <p>After a thorough analysis of the persona, I came up with the design opportunity: entice people from 18-29
+                to the sugar blowing art through hands-on DIY experience with improved playability. </p>
+            <p>As users now become more interested in the craftsmanship of this tradition rather than the products
+                (sugar figure) it makes,
+                this design opportunity actually represents a shift in the business model of this tradition: <span
+                    style="color: #e89056;">from selling products to selling experiences</span>.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/research_4@6x.png" alt=""
+                    style="width: 70%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>MAIN CHALLENGES OF THE CRAFT</h2>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/challengeMain_1@6x.png" alt=""
+                    style="width: 70%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h3>Journey Map</h3>
+            <div
+                style="display: flex; flex-direction: column;justify-content: center; align-items: center; overflow: scroll;">
+                <img src="resources/img/sugar/fabProcess@10x.png" alt=""
+                    style="width: 200%; justify-content: center;margin: 0 0 1rem 0; left: 28rem; position: relative;">
+            </div>
+            <p style="text-align: center;">⬅️ scroll left / right to view more ➡️</p>
+            <h3>Challenge Analysis</h3>
+            <p>The main challenge is maltose's <span style="color: #e89056;">high glass transition temperature
+                    (Tg)</span>, where an the syrup transforms from a hard "glassy" state into a stretchy rubbery state.
+            </p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/cha_ana_1@6x.png" alt=""
+                    style="width: 70%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h3>Potential Solutions</h3>
+            <div style="display: flex; align-items: center;">
+                <img src="resources/img/sugar/tag_1@6x.png" alt=""
+                    style="height: 2rem; justify-content: center; margin-right: 1rem;">
+                <h4>wear heat insulating gloves</h4>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <p style="margin-top: 5rem;"><span style="text-decoration: underline;">limitations</span>:
+                        thick gloves are needed to interact with syrup over 70°C, which undermine manual dexterity.</p>
+                </div>
+                <div class="col-4">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/sugar/glove@6x.png" alt=""
+                            style="width: 40%; justify-content: center;margin: 0 0 2rem 0;">
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <img src="resources/img/sugar/tag_2@6x.png" alt=""
+                    style="height: 2rem; justify-content: center; margin-right: 1rem;">
+                <h4>lower the Tg of the syrup</h4>
+                <img src="resources/img/sugar/check_2@6x.png" alt=""
+                    style="height: 2rem; justify-content: center; margin-left: 1rem;">
+            </div>
+            <p>Through literature research, I found two ways to lower the Tg of maltose:</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/lowerTg@6x.png" alt=""
+                    style="width: 100%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>MATERIAL DESIGN & ITERATION</h2>
+            <h3>Experiment Goal</h3>
+            <p>I aimed to mainly use maltose while adding other ingredients to lower Tg.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/expGoal@6x.png" alt=""
+                    style="width: 50%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h3>How to Lower the Tg?</h3>
+            <div style="display: flex; align-items: center;">
+                <img src="resources/img/sugar/tag_1@6x.png" alt=""
+                    style="height: 2rem; justify-content: center; margin-right: 1rem;">
+                <h4>add water</h4>
+            </div>
+            <p>Add water can lower the Tg, but the syrup will be too sticky to interact with.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/addWater@6x.png" alt=""
+                    style="width: 65%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <div style="display: flex; align-items: center;">
+                <img src="resources/img/sugar/tag_2@6x.png" alt=""
+                    style="height: 2rem; justify-content: center; margin-right: 1rem;">
+                <h4>add monosaccharide & water</h4>
+                <img src="resources/img/sugar/check_2@6x.png" alt=""
+                    style="height: 2rem; justify-content: center; margin-left: 1rem;">
+            </div>
+            <p>For monosaccharide, I chose <span style="color: #e89056;">glucose</span> because it has a relatively low
+                Tg (32.7~36.0°C). I also iterated different ways of mixing.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/addMono.png" alt=""
+                    style="width: 80%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h4>conclusion</h4>
+            <p>Maltose : glucose : water = 50 : 5 : 1 can lower the Tg & remain not sticky.</p>
+            <h3>Can the New Syrup Material be Blown?</h3>
+            <p>Then I used this new material to blow a sugar ball for test.</p>
+            <h4>challenge</h4>
+            <div class="row">
+                <div class="col-8">
+                    <p style="margin-top: 4rem;">It was hard to snap break the air passage because the syrup is too soft.
+                    </p>
+                </div>
+                <div class="col-4">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/sugar/newMatCha@10x.png" alt=""
+                            style="width: 80%; justify-content: center;margin: 0 0 2rem 0;">
+                    </div>
+                </div>
+            </div>
+
+            <h4>solution - 1</h4>
+            <p>A tube can be used to assist blowing.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/tubeBlowing@10x.png" alt=""
+                    style="width: 70%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <h4>solution - 2</h4>
+                <img src="resources/img/sugar/check_2@6x.png" alt=""
+                    style="height: 2rem; justify-content: center; margin-left: 1rem;">
+            </div>
+            <p>Then I looked into the materials' possibility that makes the air passage easier to break. Specifically, I
+                tried to stretch and knead the syrup repetitively.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/matSol@10x.png" alt=""
+                    style="width: 80%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h4>conclusion</h4>
+            <p><span style="color: #e89056;">repetitive stretch & knead</span> allowed new material to be blown in
+                traditional way.</p>
+
+            <h3>Material Bonus?</h3>
+            <p>With a lower Tg, the material has several good properties.</p>
+
+            <div class="row">
+                <div class="col">
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/sugar/tag_1@6x.png" alt=""
+                            style="height: 2rem; justify-content: center; margin-right: 1rem;">
+                        <h4>more shaping time</h4>
+                    </div>
+                    <p>according to Newton's Law of Cooling, low Tg means it will cool slower.</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/sugar/shapeTime@10x.png" alt=""
+                            style="width: 75%; justify-content: center;margin: 0 0 2rem 0;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/sugar/tag_2@6x.png" alt=""
+                            style="height: 2rem; justify-content: center; margin-right: 1rem;">
+                        <h4>reusability</h4>
+                    </div>
+                    <p>Tg can be reached by a heat gun, thus the syrup can be easily reused.</p>        
+                </div>
+                <div class="col">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/sugar/heatGun@10x.png" alt=""
+                            style="width: 60%; justify-content: center;margin: 0 0 2rem 0;">
+                    </div>
+                </div>
+            </div>
+            <h4>challenge</h4>
+            <p>syrup can get dry and difficult to shape after being reused</p>
+            <div class="row">
+                <div class="col">
+                    <h4>solution</h4>
+                    <p>after adding <span style="color: #e89056;">glycerin</span>, the syrup can be stretchable and reused more times</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/sugar/stretch@10x.png" alt=""
+                            style="width: 56%; justify-content: center;margin: 0 0 2rem 0;">
+                    </div>
+                </div>
+            </div>
+
+            <h3>Fabrication of 48°C Sugar</h3>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/newFabProcess@10x.png" alt=""
+                    style="width: 80%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <p>Check out the full fabrication video!</p>
+            <video src="resources/video/sugar/fabrication2.mp4" style="width: 100%;"
+                controls></video>
+        </div>
+        <div style="margin-bottom: 6rem;">
+            <h2>USER EVALUATION</h2>
+            <h3>Experiment Setup</h3>
+            <p>I ed an experiment to test whether the new material and invite 8 users aged 18-29 to participate.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/userExp@10x.png" alt=""
+                    style="width: 100%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h3>Results & User Feedback</h3>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/userShape@10x.png" alt=""
+                    style="width: 100%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <p>Check out the video of how one participant blew out the animal figure!</p>
+            <video src="resources/video/sugar/blowProcess.mp4" style="width: 100%;"
+                controls></video>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/userSurvey@10x.png" alt=""
+                    style="width: 100%; justify-content: center;margin: 2rem 0 1rem 0;">
+            </div>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/sugar/userSay@10x.png" alt=""
+                    style="width: 100%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+            <h4>conclusion</h4>
+            <p>This new material allowed <span style="color: #e89056;">an interesting sugar blowing DIY experience</span>, which can entice consumers aged 18-29. In this way, this art can be better preserved and revived.</p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>FURTHER APPLICATIONS</h2>
+            <p>Finally, I envisioned several application scenarios after the sugar figurine is made.</p>
+            <h3>Food Integration</h3>
+            <div class="row">
+                <div class="col">
+                    <p>I explored the possibilities to incorporate the blown figurine into food and drinks.</p>
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/sugar/foodInt_1@10x.png" alt=""
+                            style="height: 12rem; justify-content: center;margin: 0 0 2rem 0;">
+                    </div>
+                </div>
+                <div class="col">
+                    <p>A beverage bottle giving drinks changing sweetness overtime ⬇️</p>
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/sugar/foodInt_2@10x.png" alt=""
+                            style="height: 12rem; justify-content: center;margin: 0 0 2rem 0;">
+                    </div>
+                </div>
+            </div>
+            <h3>Interactive Food</h3>
+            <div class="row">
+                <div class="col">
+                    <h4>traditional maltose</h4>
+                    <div style="display: flex;">
+                        <img src="resources/img/sugar/highT.png" alt=""
+                            style="width: 4rem; justify-content: center;margin: 0 1rem 0 0;">
+                        <p style="margin: 0px;">High Tg</p>
+                    </div>
+                    <div style="display: flex;">
+                        <img src="resources/img/sugar/hardMat.png" alt=""
+                            style="width: 4rem; justify-content: center;margin: 0 1rem 0 0;">
+                        <p style="margin: 0px;">Gets hard when cools</p>
+                    </div>
+                    <div style="display: flex;">
+                        <img src="resources/img/sugar/unchange@6x.png" alt=""
+                            style="width: 4rem; justify-content: center;margin: 0 1rem 0 0;">
+                        <p style="margin: 0px;">The shape is unchangeable</p>
+                    </div>
+                    <p style="margin-top: 2rem;">The low Tg expands interaction possibilities: dinners can interact with their food, or food plates.</p>
+                    <div style="display: flex;">
+                        <img src="resources/img/sugar/blowInt@10x.png" alt=""
+                            style="width: 72%; justify-content: center;margin: 0 1rem 0 0;">
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>new sugar material</h4>
+                    <div style="display: flex;">
+                        <img src="resources/img/sugar/lowT.png" alt=""
+                            style="width: 4rem; justify-content: center;margin: 0 1rem 0 0;">
+                        <p style="margin: 0px;">Low Tg</p>
+                    </div>
+                    <div style="display: flex;">
+                        <img src="resources/img/sugar/softMat.png" alt=""
+                            style="width: 4rem; justify-content: center;margin: 0 1rem 0 0;">
+                        <p style="margin: 0px;">Become soft and easy to bend when slightly heated</p>
+                    </div>
+                    <div style="display: flex;">
+                        <img src="resources/img/sugar/changeable@10x.png" alt=""
+                            style="width: 4rem; justify-content: center;margin: 0 1rem 0 0;">
+                        <p style="margin: 0px;">Capable of shape-changeing even after it is made</p>
+                    </div>
+                    <p style="margin-top: 2rem;">Arduino can be used to automatize the actuation process.</p>
+                    <div style="display: flex;">
+                        <img src="resources/img/sugar/arduiInt@10x.png" alt=""
+                            style="width: 90%; justify-content: center;margin: 0 1rem 0 0;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>REFERENCES</h2>
+            <p>[1] Fukami, K. et al. (2018) “Water sorption, glass transition, and freeze-concentrated glass-like
+                transition properties of calcium maltobionate–maltose mixtures,” Journal of Thermal Analysis and
+                Calorimetry, 135(5), pp. 2775–2781. Available at: https://doi.org/10.1007/s10973-018-7793-7. </p>
+            <p>[2] Seo, J.-A. et al. (2006) “The glass transition temperatures of sugar mixtures,” Carbohydrate
+                Research, 341(15), pp. 2516–2520. Available at: https://doi.org/10.1016/j.carres.2006.08.014. </p>
+        </div>
+
+    </div>
+    <div style="margin: 8rem 0 0 0; padding: 0 0 2rem 0;">
+        <p style="text-align: center;">© 2023 All rights reserved by Yuecheng Peng. </p>
+    </div>
+
+
+    <script>
+        let stopScroll = function () {
+            let mo = function (e) { passive: false; };
+            document.body.style.overflow = 'hidden';
+            document.addEventListener("touchmove", mo, false);//禁止页面滑动
+        }
+
+        let letScroll = function () {
+            let mo = function (e) { passive: false };
+            document.body.style.overflow = '';//出现滚动条
+            document.removeEventListener("touchmove", mo, false);
+        }
+
+        if (window.performance.navigation.type == 1 || window.performance.navigation.type == 2 || window.performance.navigation.type == 0) {
+            if (history.scrollRestoration) {
+                history.scrollRestoration = 'manual';
+            }
+            window.scrollTo(0, 0);
+            stopScroll();
+        }
+
+        drawIcon(window.innerWidth / 1728 * 60, "headerIcon", false, true);
+        let outline = new DocumentOutline({
+            backgroundColor: '#2c2c2c',
+            textColor: 'white',
+            textColorLight: 'lightgrey',
+            accentColor: '#e89056',
+            defaultOpen: false
+        });
+
+
+        d3.select(".outline-nav")
+            .style("z-index", "99")
+
+        d3.select("#blankLight")
+            .style("margin-top", `${window.innerHeight}px`)
+
+        let gardenGroup = d3.select("#lightSvg")
+            .append("svg")
+            .attr("width", "100%")
+            .attr("height", window.innerHeight)
+            .append("g")
+            .attr("transform", "translate(0, -100)");
+        d3.xml("resources/img/sugar/lightbulb_2.svg")
+            .then(data => {
+                gardenGroup.node().append(data.documentElement)
+
+                d3.select("#lightBulbInteractRect")
+                    .on("click", () => {
+                        d3.select("body")
+                            .transition()
+                            .duration(2000)
+                            .style("background-color", "#fff")
+                            .end()
+                            .then(() => {
+                                d3.select("#introLight")
+                                    .style("display", 'none')
+                            })
+
+                        d3.select("#headerStyle")
+                            .transition()
+                            .duration(2000)
+                            .style("background", "rgba(255, 255, 255, 0.6)");
+
+                        d3.select("#handPullGroup")
+                            .transition()
+                            .duration(1000)
+                            .attr("transform", "translate(0, 40)")
+
+                        d3.selectAll(".headerColorChange")
+                            .transition()
+                            .duration(2000)
+                            .style("color", `rgba(38, 38, 38, 0.92)`)
+
+                        d3.select(".headerBorder")
+                            .transition()
+                            .duration(2000)
+                            .style("border-right", `1px solid #262626`)
+
+                        letScroll();
+
+                        d3.select("#blankLight")
+                            .transition()
+                            .delay(1000)
+                            .duration(2000)
+                            .style("margin-top", `0px`)
+                            .end()
+                            .then(() => {
+                                d3.select("#blankLight")
+                                    .transition()
+                                    .delay(1000)
+                                    .duration(2000)
+                                    .style("margin-top", `0px`)
+
+                            })
+
+                    })
+
+                let indicateOn = () => d3.select("#lightBulbIndicateCircle")
+                    .transition()
+                    .duration(2000)
+                    .style("fill", "#fff")
+                    .style("opacity", 0.4)
+                    .attr("r", 40)
+                    .end()
+                    .then(() => {
+                        indicateOff()
+                    })
+
+                let indicateOff = () => d3.select("#lightBulbIndicateCircle")
+                    .transition()
+                    .duration(2000)
+                    .style("fill", "#fff")
+                    .style("opacity", 0)
+                    .attr("r", 0)
+                    .end()
+                    .then(() => {
+                        indicateOn()
+                    })
+                indicateOn()
+
+            })
+    </script>
+
+</body>
+
+</html>

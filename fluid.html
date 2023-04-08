@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="resources/img/tabIcon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Cofluid</title>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- outline Import CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/outline.css">
+    <!-- outline Import the library -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/DocumentOutline.js"></script> -->
+    <script src="js/DocumentOutline.js"></script>
+
+</head>
+
+<body style="margin: 0 4rem 0 4rem;">
+    <script src="js/iconDraw.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <!-- header -->
+    <div class="glassmorphismHeader" style="display: flex; justify-content: space-between; position: sticky; top: 0;">
+        <!-- icon & name -->
+        <div style="display: flex; align-items: center; margin: 0 0 0 0.5rem;">
+            <div id="headerIcon"></div>
+            <p class="headerP" style="margin: 0;">Yuecheng Peng</p>
+        </div>
+
+        <!-- pages -->
+        <div style="display: flex; align-items: center; margin: 0 0.5rem 0 0">
+            <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect" href="home.html"> Yuecheng's Garden of Design</a>
+            </div>
+            <!-- <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect">Grad Works</a>
+            </div> -->
+            <div>
+                <a class="headerPageP cannotselect" href="aboutme.html" target="_self">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 10rem 20rem 0rem 20rem;">
+        <div style="margin-bottom: 10rem;">
+            <p class="designName" style="color: #6f65e0;">COFLUID</p>
+            <p class="designName" style="font-size:3rem; margin-bottom: 5rem;">Rapid Prototyping of Fluidic Interface</p>
+            <p>Apr 2022 - Jul 2022</p>
+            <p>Project completed at Zhejiang University with Haotian Chen, Ziqing Zheng, Longxuan Chen, Zeping Jin</p>
+            <p>Role: tech developer, literature researcher</p>
+            <p>​Instructor: Guanyun Wang, Weitao You, Lingyun Sun</p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>​VIDEO DEMONSTRATION</h2>
+            <p style="margin-bottom: 2rem;">This video below incorporates the introduction, related works, fabrication
+                process, and applications of our research. If you want to have a quick glimpse into what our research is
+                about, check this video out! ☺️ </p>
+            <video src="resources/video/fluid/cofluid.mp4" style="width: 100%;" controls></video>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>ABSTRACT</h2>
+            <p>CoFluid is a rapid prototyping fabrication method to build microfluidic channels and compatible soft
+                control valves. Compared with expensive and complicated conventional fabrication processes of
+                microfluidic channels, CoFluid features low-cost, fast and flexible. It allows designers to incorporate
+                microfluidics in prototypes with ease, providing engaging visual feedback and interesting interactions.
+            </p>
+        </div>
+
+        <div style="margin-bottom: 5rem;">
+            <h2>RELATED WORKS</h2>
+            <p style="margin-bottom: 2rem;">In HCI, interfaces of gas and liquid have attracted attention in dynamic
+                deformation, dynamic stiffness,
+                flexible sensing and soft actuating, etc.</p>
+            <div class="row">
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-right: 2rem;">
+                    <img src="resources/img/cofluid/PneUI.png" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Dynamic Deformation: Lining et al., PneUI, UIST, 2013 </p>
+                </div>
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/jamming.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Dynamic Stiffness: Sean et al., Jamming user interfaces, UIST, 2012
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-right: 2rem;">
+                    <img src="resources/img/cofluid/airTouch.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Flexible Sensing: Carlos et al., AirTouch, CHI, 2020</p>
+                </div>
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/softActuate.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Soft Actuating: Cacucciolo et al., Stretchable pumps for soft
+                        machines, Nature, 2019</p>
+                </div>
+            </div>
+
+            <p style="margin-bottom: 2rem;">Among them, liquids have many properties that gases cannot express, such as
+                heating and cooling, kinetic motion, color expression and chemical reactions. ⬇️</p>
+            <div class="row">
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-right: 2rem;">
+                    <img src="resources/img/cofluid/thermoCare.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Heating/Cooling: Yuhu et al., ThermoCaress, CHI, 2021</p>
+                </div>
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/elecFlow.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Kinetic Movement: Purnendu et al., Electriflow, DIS, 2021</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-right: 2rem;">
+                    <img src="resources/img/cofluid/colorExp.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Color Expression: Yuki et al., TuVe, SIGGRAPH Asia, 2018 </p>
+                </div>
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/chemical.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Chemical Reaction: Jasmine et al., Chemical Haptics, UIST, 2021 </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 5rem;">
+            <h3>Insight</h3>
+            <p>In current research, the design and fabrication process of small fluidic channels are complicated and
+                costly. </p>
+            <div class="row">
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-right: 2rem;">
+                    <img src="resources/img/cofluid/microFab.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Melinda et al., Microfluidic device fabrication,2015 </p>
+                </div>
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/3dPrint.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Vittorio et al., 3D Printed Scaffold-Removal Method,advanced
+                        science,2015</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>FABRICATION</h2>
+            <p style="margin-bottom: 2rem;">Thus we proposed a <span style="color: #6f65e0;">low-cost, fast, and flexible
+                    fabrication</span> of small fluidic channels and a compatible valve switch.</p>
+            <div class="row">
+                <div class="col-6" style="display: flex; flex-direction: column; padding-right: 2rem;">
+                    <h3>Channel fabrication</h3>
+                    <img src="resources/img/cofluid/channelFab.png" alt="" style="width: 100%;">
+                </div>
+                <div class="col-6" style="display: flex; flex-direction: column; padding-left: 2rem;">
+                    <h3>Valve fabrication</h3>
+                    <img src="resources/img/cofluid/valveFab.png" alt="" style="width: 100%;">
+                    <h4>cross-section ⬇️</h4>
+                    <img src="resources/img/cofluid/crossSec.png" alt="" style="width: 100%;">
+
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>APPLICATION</h2>
+            <div class="row" style="display: flex; align-items: center; margin-bottom: 4rem;">
+                <div class="col-6" style="display: flex; flex-direction: column; padding-right: 2rem;">
+                    <p>Microfluidics can be easily incorporated into prototyping, providing engaging visual feedback.
+                    </p>
+                </div>
+                <div class="col-6" style="display: flex; flex-direction: column; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/hello.webp" alt="" style="width: 100%;">
+                </div>
+            </div>
+
+            <div class="row" style="display: flex; align-items: center;">
+                <div class="col-6" style="display: flex; flex-direction: column; padding-right: 2rem;">
+                    <p> <span style="color: #6f65e0;">High expansibility</span>: this fabrication method can easily
+                        incorporate multi-layered channels. </p>
+                </div>
+                <div class="col-6" style="display: flex; flex-direction: column; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/helloLayer.webp" alt="" style="width: 100%;">
+                </div>
+            </div>
+
+            <div class="row" style="display: flex; align-items: center; margin-bottom: 2rem;">
+                <div class="col-6" style="display: flex; flex-direction: column; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/mask.webp" alt="" style="width: 60%;">
+                </div>
+                <div class="col-6" style="display: flex; flex-direction: column; padding-right: 2rem;">
+                    <p> <span style="color: #6f65e0;">High flexibility</span>: the channel can be attached to curved
+                        surfaces and stretched. For example, we apply this channel to a thermoplastic mask. </p>
+                </div>
+            </div>
+
+            <p><span style="color: #6f65e0;">Embedded valves</span> further allow many interesting forms of interaction.
+            </p>
+
+            <div class="row">
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-right: 2rem;">
+                    <img src="resources/img/cofluid/lamp.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">fluidic switch of lamp </p>
+                </div>
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/wearable.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">wearable device with haptic feedback</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-right: 2rem;">
+                    <img src="resources/img/cofluid/circuit.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">circuit block toys that uses the metaphor of water flow to current
+                    </p>
+                </div>
+                <div class="col-6"
+                    style="display: flex; flex-direction: column; align-items: center; padding-left: 2rem;">
+                    <img src="resources/img/cofluid/fluidicLoading.webp" alt="" style="width: 100%;">
+                    <p style="text-align: center;">fluidic loading animation</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div style="margin: 8rem 0 0 0; padding: 0 0 2rem 0;">
+        <p style="text-align: center;">© 2023 All rights reserved by Yuecheng Peng. </p>
+    </div>
+
+
+    <script>
+        drawIcon(window.innerWidth / 1728 * 60, "headerIcon", false, true);
+        let outline = new DocumentOutline({
+            backgroundColor: '#2c2c2c',
+            textColor: 'white',
+            textColorLight: 'lightgrey',
+            accentColor: '#6f65e0',
+            defaultOpen: false
+        });
+        d3.select(".outline-nav")
+            .style("z-index", "99")
+    </script>
+
+</body>
+
+</html>

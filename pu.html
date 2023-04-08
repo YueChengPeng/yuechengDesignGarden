@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="resources/img/tabIcon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- outline Import CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/outline.css">
+    <!-- outline Import the library -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/DocumentOutline.js"></script> -->
+    <script src="js/DocumentOutline.js"></script>
+
+
+    <title>INTELLITEX</title>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body style="margin: 0 4rem 0 4rem;">
+    <script src="js/iconDraw.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <!-- header -->
+    <div class="glassmorphismHeader" style="display: flex; justify-content: space-between; position: sticky; top: 0;">
+        <!-- icon & name -->
+        <div style="display: flex; align-items: center; margin: 0 0 0 0.5rem;">
+            <div id="headerIcon"></div>
+            <p class="headerP" style="margin: 0;">Yuecheng Peng</p>
+        </div>
+
+        <!-- pages -->
+        <div style="display: flex; align-items: center; margin: 0 0.5rem 0 0">
+            <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect" href="home.html"> Yuecheng's Garden of Design</a>
+            </div>
+            <!-- <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect">Grad Works</a>
+            </div> -->
+            <div>
+                <a class="headerPageP cannotselect" href="aboutme.html" target="_self">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 10rem 20rem 0rem 20rem;">
+        <div style="margin-bottom: 10rem;">
+            <p class="designName" style="color: #89b57a;">INTELLITEX</p>
+            <p class="designName" style="font-size:3rem; margin-bottom: 5rem;">Multifunctional textile sensor design and system for bedsore prevention
+            </p>
+            <p>Dec 2022 - </p>
+            <p>Personal project completed at Zhejiang University</p>
+            <p>Advisor: Guanyun Wang </p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <p>This is an ongoing project, estimated to be compeleted in June, 2023. I will update the details of this project ASAP.</p>
+        </div>
+
+        
+    </div>
+    <div style="margin: 8rem 0 0 0; padding: 0 0 2rem 0;">
+        <p style="text-align: center;">© 2023 All rights reserved by Yuecheng Peng. </p>
+    </div>
+
+
+    <script>
+        drawIcon(window.innerWidth / 1728 * 60, "headerIcon", false, true);
+        let outline = new DocumentOutline({
+            backgroundColor: '#2c2c2c',
+            textColor: 'white',
+            textColorLight: 'lightgrey',
+            accentColor: '#89b57a',
+            defaultOpen: false
+        });
+
+        d3.select(".outline-nav")
+            .style("z-index", "99")
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="resources/img/tabIcon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- outline Import CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/outline.css">
+    <!-- outline Import the library -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/DocumentOutline.js"></script> -->
+    <script src="js/DocumentOutline.js"></script>
+
+    <title>MagPaper</title>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body style="margin: 0 4rem 0 4rem;">
+    <script src="js/iconDraw.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <!-- header -->
+    <div class="glassmorphismHeader" style="display: flex; justify-content: space-between; position: sticky; top: 0;">
+        <!-- icon & name -->
+        <div style="display: flex; align-items: center; margin: 0 0 0 0.5rem;">
+            <div id="headerIcon"></div>
+            <p class="headerP" style="margin: 0;">Yuecheng Peng</p>
+        </div>
+
+        <!-- pages -->
+        <div style="display: flex; align-items: center; margin: 0 0.5rem 0 0">
+            <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect" href="home.html"> Yuecheng's Garden of Design</a>
+            </div>
+            <!-- <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect">Grad Works</a>
+            </div> -->
+            <div>
+                <a class="headerPageP cannotselect" href="aboutme.html" target="_self">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 10rem 20rem 0rem 20rem;">
+        <div style="margin-bottom: 10rem;">
+            <p class="designName" style="color: #D3D3D3;">MagPaper</p>
+            <p class="designName" style="font-size:3rem; margin-bottom: 5rem;">Cheap, Customizable and Reconfigurable
+                Rapid Prototyping of Haptic Interface Based on Paper</p>
+            <p>Nov 2022 - Dec 2022</p>
+            <p>Personal project completed at Zhejiang University</p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>BACKGROUND</h2>
+            <h3>Haptic Feedback: Important yet Ignored in Prototyping</h3>
+            <div class="row">
+                <div class="col">
+                    <h4>importance</h4>
+                    <p>Haptics is crucial in physical interface interactions, because this sense facilitates task
+                        performance and contributes to the satisfaction of experiences, etc. [4]</p>
+                    <h4>challenge</h4>
+                    <p>However, it is challenging and complicated to design for haptics [1], and thus haptic feedback is
+                        often ignored in tangible demos.</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/magpaper/background.webp" alt="" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 8rem;">
+            <h2>USER RESEARCH</h2>
+            <h3>Who Need to Prototype with Haptic Feedback? </h3>
+            <p style="margin-bottom: 4rem;">In a survey of designers of different ages and backgrounds, I found <span
+                    style="text-decoration: underline;">student industrial designers</span> are suitably potential
+                target users.</p>
+            <h4 style="margin-bottom: 2rem;">do they need haptic prototyping?</h4>
+            <div class="row" style="margin-bottom: 4rem;">
+                <div class="col-7">
+                    <div class="row" style="display: flex; align-items: flex-end; margin-bottom: 2rem;">
+                        <div class="col">
+                            <div style="display: flex; flex-direction: column; ">
+                                <p style="margin: 0;"><span style="font-size: 3rem;">2</span> in 5</p>
+                                <div style="display: flex; ">
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; border: 2px solid #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; border: 2px solid #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; border: 2px solid #fff;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p style="margin: 0;">courses per semester have a tangible prototype project </p>
+                        </div>
+                    </div>
+                    <div class="row" style="display: flex; align-items: flex-end;">
+                        <div class="col">
+                            <div style="display: flex; flex-direction: column; ">
+                                <p style="margin: 0;"><span style="font-size: 3rem;">3</span> in 4</p>
+                                <div style="display: flex; ">
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; border: 2px solid #fff; margin-right: 0.4rem;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p style="margin: 0;">students think that haptic feedback is important in their projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <img src="resources/img/magpaper/userRes_1.webp" alt="" style="width: 100%;">
+                </div>
+            </div>
+            <h4 style="margin-bottom: 2rem;">can they include haptics in demos now?</h4>
+            <div style="margin-bottom: 4rem;">
+                <div class="row" style="display: flex; align-items: flex-end;">
+                    <div class="col-4">
+                        <div style="display: flex; flex-direction: column; ">
+                            <p style="margin: 0;"><span style="font-size: 3rem;">8</span> in 10</p>
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="display: flex; margin-bottom: 0.4rem;">
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+
+                                </div>
+                                <div style="display: flex;">
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; margin-right: 0.4rem;">
+                                    </div>
+                                    <div
+                                        style="height: 2rem; width: 2rem; border-radius: 2rem; border: 2px solid #fff; margin-right: 0.4rem;">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <p style="margin: 0;">students in a 3-week Arduino tangible prototype workshop do not
+                            incorporate haptics because they think it is "challenging" and "time-consuming" </p>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 1rem 2rem; border: solid #fff 0.2rem; margin-bottom: 4rem; ">
+                <h4 style="margin-bottom: 1rem;">conclusion</h4>
+                <p>Student industrial designers often work at the intersection of tangible interaction and industrial
+                    design, and they often find it challenging to design haptics despite its importance. Therefore they
+                    could be the potential user group.</p>
+            </div>
+            <h3>Their Requirements of the Haptics Design?</h3>
+            <p>I conducted further interviews with 12 students from design related majors. (8 undergraduates, 4 graduate
+                students)</p>
+            <div class="row">
+                <div class="col">
+                    <h4 style="margin-bottom: 1.4rem;">desirable haptic prototype features?</h4>
+                    <img src="resources/img/magpaper/desireFeat.png" alt=""
+                        style="height: 14rem; margin-bottom: 1.2rem; border-radius: 1rem;">
+                    <p>*reconfigurable: provide various haptic feedback with the same gadget</p>
+                    <p>**data from interview discourse texts</p>
+
+                </div>
+                <div class="col">
+                    <h4 style="margin-bottom: 1.4rem;">type of haptics usually needed?</h4>
+                    <img src="resources/img/magpaper/typeHap.png" alt=""
+                        style="height: 14rem; margin-bottom: 1.2rem; border-radius: 1rem;">
+                    <p>they usually need haptics in physical inputs with interaction purposes (e.g. buttons, switches,
+                        etc.)</p>
+                </div>
+            </div>
+            <h4 style="margin-bottom: 1.4rem;">access to prototyping equipments?</h4>
+            <div style="display: flex; align-items: center; margin-bottom: 6rem;">
+                <img src="resources/img/magpaper/arc_66.svg" alt="" style="width: 6rem; margin-right: 0.4rem;">
+                <p style="font-size: 3rem;margin-right: 2rem;">66%</p>
+                <p> of students mentions that they cannot easily use some expensive prototype machines such as 3d
+                    printers,
+                    laser cutters, CNC machines, etc.</p>
+            </div>
+
+            <div style="padding-left: 2rem;">
+                <div class="sayingQuote"
+                    style="padding: 1rem 2rem; border: solid #ffffff85 0.2rem; margin-bottom: 4rem; ">
+                    <p ]>we need to make appointments with school labs or order online to use 3d
+                        printer, resulting in long iteration time...</p>
+                    <p style="margin: 0;">...It's exciting to have haptic feedback in demos, but I want it to be easy
+                        and
+                        cheap since we only have a limited budget and don't have a regular access to prototyping
+                        machines such as 3d printers.</p>
+                </div>
+            </div>
+
+            <div style="padding: 1rem 2rem; border: solid #fff 0.2rem; margin-bottom: 4rem; ">
+                <h4 style="margin-bottom: 1rem;">conclusion</h4>
+                <p>Student industrial designers usually need haptics in <span
+                        style="text-decoration: underline;">physical inputs</span>, with following features:</p>
+                <div class="row">
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-startflex-start;">
+                        <img src="resources/img/magpaper/cheap_1.svg" alt=""
+                            style="height: 3rem; margin-right: 2.2rem;">
+                        <p style="margin: 0;">cheap</p>
+                    </div>
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-startflex-start;">
+                        <img src="resources/img/magpaper/equip.svg" alt="" style="height: 3rem; margin-right: 2rem;">
+                        <p style="margin: 0;">no need for costly machine</p>
+                    </div>
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-startflex-start;">
+                        <img src="resources/img/magpaper/custom.svg" alt="" style="height: 2rem; margin-right: 2rem;">
+                        <p style="margin: 0;">customizable</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-start;">
+                        <img src="resources/img/magpaper/make.svg" alt="" style="height: 3.4rem; margin-right: 1rem;">
+                        <p style="margin: 0;">easy to make</p>
+                    </div>
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-start;">
+                        <img src="resources/img/magpaper/afford.svg" alt=""
+                            style="height: 1.4rem; margin-right: 2.4rem;">
+                        <p style="margin: 0;">high affordance</p>
+                    </div>
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-start;">
+                        <img src="resources/img/magpaper/reconfig.svg" alt=""
+                            style="height: 4rem; margin-right: 1.6rem;">
+                        <p style="margin: 0;">reconfigurable</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="padding: 1rem 2rem; border: solid #fff 0.2rem; margin-bottom: 4rem; box-shadow: 0.6rem 0.6rem 0 0 #fff">
+                <h3 style="margin-bottom: 1rem;">Problem Statement</h3>
+                <p>Student industrial designers usually need haptics in <span
+                        style="text-decoration: underline;">physical inputs</span>, with following features:</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 8rem;">
+            <h2>CURRENT SOLUTIONS</h2>
+            <p style="margin-bottom: 2rem;">There are many low-tech-threshold rapid prototyping methods of creating
+                haptic feelings for hand interactions on physical interfaces, but none of them can meet all the
+                reuirements from the research.</p>
+
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col" style="padding: 0 3rem; display: flex; flex-direction: column;">
+                    <img src="resources/img/magpaper/shapHaptic@4x.png" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Shape-Haptics [1]</p>
+                    <p style="padding: 1rem; border: 2px solid #fff;text-align: center">require laser-cutter</p>
+                </div>
+                <div class="col" style="padding: 0 3rem; display: flex; flex-direction: column;">
+                    <img src="resources/img/magpaper/magFeed@4x.png" alt="" style="width: 100%;">
+                    <p style="text-align: center;">🧲 Magnetic-Feedback [2]</p>
+                    <p style="padding: 1rem; border: 2px solid #fff;text-align: center">require 3d printer</p>
+                </div>
+                <div class="col" style="padding: 0 3rem; display: flex; flex-direction: column;">
+                    <img src="resources/img/magpaper/pneumatic@4x.png" alt="" style="width: 100%;">
+                    <p style="text-align: center;">Pneumatic Controls [3]</p>
+                    <p style="padding: 1rem; border: 2px solid #fff;text-align: center">require 3d printer</p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 1rem;">
+                <div class="col" style="padding: 0 3rem; display: flex; flex-direction: column;">
+                    <img src="resources/img/magpaper/mecha@4x.png" alt="" style="width: 100%;">
+                    <p style="text-align: center;">🧲 Mechamagnets [4]</p>
+                    <p style="padding: 1rem; border: 2px solid #fff;text-align: center">require 3d printer</p>
+                </div>
+                <div class="col" style="padding: 0 3rem; display: flex; flex-direction: column;">
+                    <img src="resources/img/magpaper/magFeed@4x.png" alt="" style="width: 100%;">
+                    <p style="text-align: center;">🧲 Magnetact [5]</p>
+                    <p style="padding: 1rem; border: 2px solid #fff;text-align: center">lack customizability</p>
+                </div>
+                <div class="col" style="padding: 0 3rem; display: flex; flex-direction: column;">
+                    <img src="resources/img/magpaper/bump@4x.png" alt="" style="width: 100%;">
+                    <p style="text-align: center;">🧲 Bump ahead [6]</p>
+                    <p style="padding: 1rem; border: 2px solid #fff;text-align: center">only silde interaction</p>
+                </div>
+            </div>
+            <p style="margin-bottom: 3rem;">🧲: use magnets to provide haptic feedback</p>
+
+            <h3>Insight</h3>
+            <p style="margin-bottom: 4rem;">Magnetism is used by many of the above rapid-designing method of haptic
+                feelings of tangible interfaces and features cheap, easy to fabricate, etc.</p>
+
+            <div
+                style="padding: 1rem 2rem; border: solid #fff 0.2rem; margin-bottom: 4rem; box-shadow: 0.6rem 0.6rem 0 0 #fff">
+                <h3 style="margin-bottom: 1rem;">Opportunity</h3>
+                <p>Based on magnetism, design an easy-to-fabricate, cheap, customizable, and reconfigurable physical
+                    interface toolkit with haptic feedback and high affordance.</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 8rem;">
+            <h2>BRAINSTORMING</h2>
+            <p style="margin-bottom: 2rem;">I love to explore the potential of new materials, therefore first I looked
+                into one promising material for magnetic haptic interfaces: <span
+                    style="text-decoration: underline;">magnetic elastomers</span>. [7]</p>
+            <h3 style="margin-bottom: 1.4rem;">Introducing Magnetic Elastomer (ME) </h3>
+            <h4 style="margin-bottom: 1rem;">why magnetic elastomers (ME)?</h4>
+            <p>ME consists of elastomer and magnetizable particles, which is cheap and easy to make. Its mechanical
+                properties can also be controlled by the external magnetic field, thus reconfigurable.</p>
+            <div class="row" style="display: flex; align-items: center;">
+                <div class="col-7">
+                    <div class="row">
+                        <div class="col" style="display: flex; align-items: center; justify-content: flex-start;">
+                            <img src="resources/img/magpaper/cheap_1.svg" alt=""
+                                style="height: 3rem; margin-right: 1rem;">
+                            <p style="margin: 0;">cheap</p>
+                        </div>
+                        <div class="col" style="display: flex; align-items: center; justify-content: flex-start;">
+                            <img src="resources/img/magpaper/make.svg" alt=""
+                                style="height: 3.4rem; margin-right: 1rem;">
+                            <p style="margin: 0;">easy to make</p>
+                        </div>
+                        <div class="col" style="display: flex; align-items: center; justify-content: flex-start;">
+                            <img src="resources/img/magpaper/reconfig.svg" alt=""
+                                style="height: 4rem; margin-right: 1rem;">
+                            <p style="margin: 0;">reconfigurable</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <img src="resources/img/magpaper/stretchME@4x.png" alt="" style="width: 100%;">
+                </div>
+
+            </div>
+            <h4>how to fabricate?</h4>
+            <p>The fabrication process is easy and cheap. ⬇️</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/meFab@4x.png" alt="" style="width: 50%;">
+            </div>
+            <p>For magnetizable particles, I choose Fe and Fe3O4 for further testing because they are cheaper.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/particle@4x.png" alt="" style="width: 25%;">
+            </div>
+            <h4>how to use?</h4>
+            <p>I applied the material onto different substrates, which will lead to different properties.</p>
+            <div class="row" style="margin-bottom: 4rem;">
+                <div class="col" style="display: flex;flex-direction: column;align-items: center;">
+                    <img src="resources/img/magpaper/mepaper.png" alt="" style="width: 50%;">
+                    <p style="text-decoration: underline;">Paper</p>
+                    <p style="margin-bottom: 0.4rem;">slightly rigid</p>
+                    <p>easy to fold</p>
+                </div>
+                <div class="col" style="display: flex;flex-direction: column;align-items: center;">
+                    <img src="resources/img/magpaper/meplastic@4x.png" alt="" style="width: 50%;">
+                    <p style="text-decoration: underline;">PLA Plastic</p>
+                    <p style="margin-bottom: 0.4rem;">loose bonding</p>
+                    <p>inflatable</p>
+                </div>
+                <div class="col" style="display: flex;flex-direction: column;align-items: center;">
+                    <img src="resources/img/magpaper/megauze@4x.png" alt="" style="width: 50%;">
+                    <p style="text-decoration: underline;">Gauze</p>
+                    <p style="margin-bottom: 0.4rem;">soft</p>
+                    <p>easy to bend, twist .etc</p>
+                </div>
+            </div>
+            <h3>Solution1: ME + Plastic </h3>
+            <p>ME and plastic is a classic bilayer combination which can be inflated. Using the inflated air and
+                magnetic attraction, some haptic feeling can possibly be simulated.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/solution1@4x.png" alt="" style="width: 90%;">
+            </div>
+            <h4>challenge</h4>
+            <p>The PLA plastic base still need to be 3d-printed, and the haptic feedback is weak.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <img src="resources/img/magpaper/solution1_challenge@4x.png" alt="" style="width: 90%;">
+            </div>
+            <h3>Solution2: ME + Paper (magnetized)</h3>
+            <p>Paper is a cheap and interesting candidate for substrate because it gives the elastomer rigidity so that
+                it can be reshaped by folding. [7]</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <img src="resources/img/magpaper/solution2@4x.png" alt="" style="width: 65%;">
+            </div>
+            <h4>challenge</h4>
+            <p style="margin-bottom: 2rem;">Magnetizing the origami structure is difficult, and requires expensive
+                equipments.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <img src="resources/img/magpaper/solution2_challenge@4x.png" alt="" style="width: 80%;">
+            </div>
+            <h3>⭐️ Solution3: ME + Paper (unmagnetized)</h3>
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col-8">
+                    <p>Hard as the elastomer is to be magnetized, it can still be attracted by the magnet. Thus I wondered
+                        if this force can be used for haptic feedback.</p>
+                    <img src="resources/img/magpaper/solution3_1@4x.png" alt="" style="width: 100%;">
+                </div>
+                <div class="col-4">
+                    <img src="resources/img/magpaper/solution3_2@4x.png" alt="" style="width: 100%;">
+                </div>
+
+            </div>
+            <h4>challenge</h4>
+            <p>The attraction force can be weak because while a pair of magnets can attract each other, the
+                elastomer can only be attracted by the magnet, resulting in the reduction of half of the force.
+            </p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/solution3_3@4x.png" alt="" style="width: 40%;">
+            </div>
+            <h4>solution</h4>
+            <p>Consequently, I tested different materials and their proportions to maximize this force feedback.</p>
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 0rem; align-items: center;">
+                <img src="resources/img/magpaper/solution3_4@4x.png" alt="" style="width: 80%;">
+                <img src="resources/img/magpaper/solution3_5@4x.png" alt="" style="width: 80%;">
+            </div>
+        </div>
+        <div style="margin-bottom: 8rem;">
+            <h2>DESIGN</h2>
+            <h3>Introducing the MagPaper</h3>
+            <p>The <i>MagPaper</i> is a rich interaction toolkit with haptic feedback using magnetic elastomers that can
+                be cheap and easy fabricated.</p>
+            <h4>how to design?</h4>
+            <p>I designed a website, where various kinds of haptic component prefabs are available. Designers can also
+                upload their own designs and simulate haptic feedback online.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/howDesign@4x.png" alt="" style="width: 90%;">
+            </div>
+            <h4>how to fabricate?</h4>
+            <p>The fabrication process features easy, customizable and cheap.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/howFab@4x.png" alt="" style="width: 90%;">
+            </div>
+            <p>Here is a video demonstration of the fabrication process.</p>
+            <video src="resources/video/magpaper/fabrication.mp4" style="width: 100%; margin-bottom: 4rem;"
+                controls></video>
+            <h3>Feature 1: High Affordance </h3>
+            <p>MagPaper can be cut & folded into various shapes, and icons signaling functions can also be printed on
+                it. Therefore, designers can tailor components with high visual affordance.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/feat1@4x.png" alt="" style="width: 80%;">
+            </div>
+            <p>Here is an example of Todo List made by the MagPaper.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <video src="resources/video/magpaper/TodoLst2.mp4" style="width: 70%; margin-bottom: 4rem;"
+                    controls></video>
+            </div>
+
+
+            <h3>Feature 2: Customizable </h3>
+            <p>Using MagPaper, designers can customize nearly any kind of interaction component with haptic feedback.
+                Here are examples of some commonly used components.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/feat2@4x.png" alt="" style="width: 80%;">
+            </div>
+            <p>Here is a video demonstration of how to interact with several components. You can turn on the sound to
+                "hear" the haptic feedback. </p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+
+                <video src="resources/video/magpaper/customizable_5.mp4" style="width: 70%; margin-bottom: 4rem;"
+                    controls></video>
+            </div>
+
+            <h3>Feature 3: Reconfigurable</h3>
+            <p>With different strengths and kinds of external magnetic fields, the haptic feedback of MagPaper
+                components are highly reconfigurable.</p>
+            <h4>haptic curve</h4>
+            <p>Different magnetic field intensity will result in various haptic feelings.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/feat3_1@4x.png" alt="" style="width: 80%;">
+            </div>
+
+            <h4>haptic interaction logic </h4>
+            <p>Different magnetic fields can result in diverse logic even for the same component, leading to different
+                haptic feelings. </p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/feat3_2@4x.png" alt="" style="width: 80%;">
+            </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <video src="resources/video/magpaper/interactionLogic.mp4" style="width: 70%; margin-bottom: 4rem;"
+                    controls></video>
+            </div>
+
+            <h4>haptic state indicator </h4>
+            <p>Different magnetic fields can result in diverse logic even for the same component, leading to different
+                haptic feelings.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/feat3_3@4x.png" alt="" style="width: 65%;">
+            </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <video src="resources/video/magpaper/stateInd.mp4" style="width: 70%; margin-bottom: 4rem;"
+                    controls></video>
+            </div>
+
+            <div style="padding: 1rem 2rem; border: solid #fff 0.2rem; margin-bottom: 4rem; ">
+                <h4 style="margin-bottom: 1rem;">conclusion</h4>
+                <p>Student industrial designers usually need haptics in <span
+                        style="text-decoration: underline;">physical inputs</span>, with following features:</p>
+                <div class="row">
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-startflex-start;">
+                        <img src="resources/img/magpaper/cheap_1.svg" alt=""
+                            style="height: 3rem; margin-right: 2.2rem;">
+                        <p style="margin: 0;">cheap</p>
+                        <img src="resources/img/magpaper/check.svg" alt="" style="height: 2rem; margin-left: 2.2rem;">
+                    </div>
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-startflex-start;">
+                        <img src="resources/img/magpaper/equip.svg" alt="" style="height: 3rem; margin-right: 2rem;">
+                        <p style="margin: 0;">no need for costly machine</p>
+                        <img src="resources/img/magpaper/check.svg" alt="" style="height: 2rem; margin-left: 2.2rem;">
+                    </div>
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-startflex-start;">
+                        <img src="resources/img/magpaper/custom.svg" alt="" style="height: 2rem; margin-right: 2rem;">
+                        <p style="margin: 0;">customizable</p>
+                        <img src="resources/img/magpaper/check.svg" alt="" style="height: 2rem; margin-left: 2.2rem;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-start;">
+                        <img src="resources/img/magpaper/make.svg" alt="" style="height: 3.4rem; margin-right: 1rem;">
+                        <p style="margin: 0;">easy to make</p>
+                        <img src="resources/img/magpaper/check.svg" alt="" style="height: 2rem; margin-left: 2.2rem;">
+                    </div>
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-start;">
+                        <img src="resources/img/magpaper/afford.svg" alt=""
+                            style="height: 1.4rem; margin-right: 2.4rem;">
+                        <p style="margin: 0;">high affordance</p>
+                        <img src="resources/img/magpaper/check.svg" alt="" style="height: 2rem; margin-left: 2.2rem;">
+                    </div>
+                    <div class="col" style="display: flex; align-items: center; justify-content: flex-start;">
+                        <img src="resources/img/magpaper/reconfig.svg" alt=""
+                            style="height: 4rem; margin-right: 1.6rem;">
+                        <p style="margin: 0;">reconfigurable</p>
+                        <img src="resources/img/magpaper/check.svg" alt="" style="height: 2rem; margin-left: 2.2rem;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 8rem;">
+            <h2>APPLICATION</h2>
+            <h3>Interactive Joystick</h3>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/joystick_1@4x.png" alt="" style="width: 75%;">
+            </div>
+            <p>The joystick can be used to provide clike-like haptic feeling of four dimensions.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/joystick_2@4x.png" alt="" style="width: 75%;">
+            </div>
+            <p>The reconfigurability can also simulate physical properties of virtual objects. </p>
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <img src="resources/img/magpaper/joystick_3@4x.png" alt="" style="width: 75%;">
+            </div>
+            <h3>Interactive Book</h3>
+            <p>MagPaper can easily be used to make components with high affordance.</p>
+            <h4 style="margin-bottom: 2rem;">friction feedback slider</h4>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/slider@4x.png" alt="" style="width: 75%;">
+            </div>
+            <h4 style="margin-bottom: 2rem;">paper light switch</h4>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <img src="resources/img/magpaper/switch@4x.png" alt="" style="width: 75%;">
+            </div>
+
+            <h3>Crocodile Toy</h3>
+            <p>MagPaper could also be used for actuation, which can be easily compatible with prototype tools like the Arduino.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/magpaper/croc@4x.png" alt="" style="width: 90%;">
+            </div>
+
+        </div>
+        <div>
+            <h2>REFERENCES </h2>
+            <p>[1] Zheng, C. et al. (2022) “Shape-haptics: Planar &amp; Passive Force Feedback mechanisms for physical
+                interfaces,” CHI Conference on Human Factors in Computing Systems [Preprint]. Available at:
+                https://doi.org/10.1145/3491102.3501829. </p>
+            <p>[2] Ogata, M. and Koyama, Y. (2021) “A computational approach to magnetic force feedback design,”
+                Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems [Preprint]. Available at:
+                https://doi.org/10.1145/3411764.3445631. </p>
+            <p>[3] Vázquez, M. et al. (2015) “3D printing pneumatic device controls with variable activation force
+                capabilities,” Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems
+                [Preprint]. Available at: https://doi.org/10.1145/2702123.2702569. </p>
+            <p>[4] Zheng, C. et al. (2019) “Mechamagnets,” Proceedings of the Thirteenth International Conference on
+                Tangible, Embedded, and Embodied Interaction [Preprint]. Available at:
+                https://doi.org/10.1145/3294109.3295622. </p>
+            <p>[5] Yasu, K. (2019) “Magnetact,” Proceedings of the 2019 CHI Conference on Human Factors in Computing
+                Systems [Preprint]. Available at: https://doi.org/10.1145/3290605.3300470. </p>
+            <p>[6] Yasu, K. and Katsumoto, Y. (2015) “Bump ahead,” SIGGRAPH Asia 2015 Emerging Technologies [Preprint].
+                Available at: https://doi.org/10.1145/2818466.2818478. </p>
+            <p>[7] Yi, S. et al. (2022) “High-throughput fabrication of soft magneto-origami machines,” Nature
+                Communications, 13(1). Available at: https://doi.org/10.1038/s41467-022-31900-5. </p>
+        </div>
+
+    </div>
+    <div style="margin: 8rem 0 0 0; padding: 0 0 2rem 0;">
+        <p style="text-align: center;">© 2023 All rights reserved by Yuecheng Peng. </p>
+    </div>
+
+
+    <script>
+        drawIcon(window.innerWidth / 1728 * 60, "headerIcon", false, true);
+        let outline = new DocumentOutline({
+            backgroundColor: '#2c2c2c',
+            textColor: 'white',
+            textColorLight: 'lightgrey',
+            accentColor: '#858585',
+            defaultOpen: false
+        });
+
+        d3.select(".outline-nav")
+            .style("z-index", "99")
+    </script>
+
+</body>
+
+</html>

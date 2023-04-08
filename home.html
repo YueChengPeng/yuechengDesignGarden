@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="resources/img/tabIcon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Yuecheng's Home</title>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body style="margin: 0 4rem 0 4rem;">
+    <script src="js/iconDraw.js"></script>
+    <!-- <script type="module" src="js/index.js"></script> -->
+
+    <!-- header -->
+    <div class="glassmorphismHeader" style="display: flex; justify-content: space-between; position: sticky; top: 0;">
+        <!-- icon & name -->
+        <div style="display: flex; align-items: center; margin: 0 0 0 0.5rem;">
+            <div id="headerIcon"></div>
+            <p class="headerP" style="margin: 0;">Yuecheng Peng</p>
+        </div>
+
+        <!-- pages -->
+        <div style="display: flex; align-items: center; margin: 0 0.5rem 0 0">
+            <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect" href="home.html"> Yuecheng's Garden of Design</a>
+            </div>
+            <!-- <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect">Grad Works</a>
+            </div> -->
+            <div>
+                <a class="headerPageP cannotselect" href="aboutme.html" target="_self">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: flex;flex-direction: column; align-items: center; margin: 8rem 0 8rem 0;">
+        <h2>HI THERE !</h2>
+        <h1 style="margin-bottom: 4rem;">I'm Yuecheng</h1>
+        <h4 style="margin-bottom: 2rem;">I'm a...</h4>
+
+        <h4>
+            <p class="typewrite" data-period="2000"
+                data-type='[ "🎭 human-oriented designer", "🔬 tech-driven developer", "📈 data-based storyteller"]'>
+                <span class="wrap"></span>
+            </p>
+        </h4>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: center; margin: 0 0 2rem 0;">
+        <div id="scrollDownIcon" style="background-color: #fff; width: 1rem; height: 1rem; border-radius: 1rem;"></div>
+        <p style="margin: 0 0 0 1rem;">scroll to explore my works!</p>
+    </div>
+
+    <div id="collegeIllusSvg" style="display:flex; justify-content: center;"></div>
+
+    <div style="display: flex; justify-content: center; margin: 0 0 4rem 0;">
+        <div class="btn-container" style="margin: 0 2rem;">
+            <!-- <img src="./images/vizMode.svg" alt="" style="width: 1.5rem; margin-right: 1rem;"> -->
+            <!-- <i class="fa fa-sun-o" aria-hidden="true"></i> -->
+            <label class="switch btn-color-mode-switch">
+                <input id="changeCollegeInput" onclick="changeCollegeState(this)" college="undergrad" type="checkbox"
+                    name="viz_mode" id="viz_mode" value="1">
+                <label for="viz_mode" data-on="Grad Works" data-off="Undergrad Works"
+                    class="btn-color-mode-switch-inner"></label>
+            </label>
+        </div>
+    </div>
+
+    <!-- undergrad div -->
+    <div id="underGradDiv" style="display: block;">
+        <div style="margin: 0 20rem 0 20rem;">
+            <p>I will earn B.Eng in Industrial Design (2019-2023) at Zhejiang University in Jul. 2023. During my
+                undergrad studies, I joined many interesting research projects, and among them, I'm most interested in
+                <span class="highlight">tangible interaction design</span>
+                (like creating various kinds of physical prototypes, doing material experiments, etc.)
+                and also <span class="highlight">data visualization</span> (derive insights from data, tell interesting
+                stories with data, etc.)
+            </p>
+            <p>
+                Since I love using visualizations to tell ideas, I will present my design path during undergrad using
+                data visualization. Enjoy:)
+            </p>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin: 8rem 0 4rem 0;">
+            <div class="gradient-border" id="welcomeBox">
+                <h4 style="padding: 1rem 2rem 1rem 2rem">Welcome to Yuecheng's Garden!</h4>
+            </div>
+        </div>
+        <!-- 图注 -->
+        <div style="margin: 0 0 4rem 0;">
+            <p style="text-align: center;">each flower represent one project</p>
+
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <div style="display: flex; padding: 0 4rem 0 0; flex-direction: column;">
+                    <div style="display: flex; align-items: center; margin: 0 0 1.2rem 0;">
+                        <img src="resources/svg/personalProject.svg" alt="" style="width: 3rem; margin: 0 1.5rem 0 0;">
+                        <p style="margin: 0;">Personal Project</p>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/svg/groupProject.svg" alt="" style="width: 3rem; margin: 0 1.5rem 0 0;">
+                        <p style="margin: 0;">Group Project</p>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; padding: 0 4rem 0 4rem; flex-direction: column; border-left: 1px solid #fff; border-right: 1px solid #fff;">
+                    <div style="display: flex; align-items: center; margin: 0 0 1.2rem 0;">
+                        <img src="resources/svg/groupProject.svg" alt="" style="width: 3rem; margin: 0 1.5rem 0 0;">
+                        <p style="margin: 0;">Featured Projects</p>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/svg/groupProject.svg" alt="" style="width: 2rem; margin: 0 2rem 0 0.5rem;">
+                        <p style="margin: 0;">Other Projects</p>
+                    </div>
+                </div>
+                <div style="display: flex; padding: 0 0 0 4rem; align-items: center;">
+                    <img src="resources/svg/projectLen.svg" alt="" style="width: 4rem; margin: 0 2rem 0 0;">
+                    <p style="margin: 0;">Project Start & End</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="gardenSvg" style="display: flex; justify-content: center;"></div>
+    </div>
+
+    <!-- grad div -->
+    <div id="gradDiv" style="display: none; transform: translate(100px,0); opacity: 0;">
+        <div style="margin: 0 20rem 30rem 20rem;">
+            <p>To be continued...</p>
+            <p>I will pursue a master's degree in HCI in the US. Now I have multiple offers from UW, NYU, UTA, NEU, CU
+                Boulder, etc. Can't wait to see what I can create there :)</p>
+        </div>
+    </div>
+
+    <div style="margin: 8rem 0 0 0; padding: 0 0 2rem 0;">
+        <p style="text-align: center;">© 2023 All rights reserved by Yuecheng Peng. </p>
+    </div>
+
+    <!-- project tooltip -->
+    <div id="projectTooltip" class="glassmorphismTooltip"
+        style="display: none; width: 40rem; padding: 2.5rem 2.5rem 2.5rem 2.5rem; position: absolute; left:4rem">
+        <div style="display: flex; align-items: center;">
+            <div style="margin: 0 0rem 0 0;">
+                <h2 id="projectTooltipName" style="color: #c9da2b; font-size: 2.4rem; margin-bottom: 1rem;">MOISTVALVE</h2>
+                <h2 id="projectTooltipExplain">MOISTURE SENSORY SOFT VALVE</h2>
+                <p id="projectTooltipSkills">Material Design | Soft Sensors | Ergonomics</p>
+            </div>
+            <img id="projectTooltipImg" src="resources/img/blank.png" alt="" style="width: 18%;">
+        </div>
+
+        <p id="projectTooltipOverview">Overview: From the technology perspective, I explore the possibilities of using
+            smart responsive materials in
+            the pneumatic context. This work presents a smart soft pneumatic valve that is water-responsive. It can
+            realize logic control based on environmental humidity degree without the need for electricity, hard sensors
+            or computer control.</p>
+        <p id="projectTooltipTime" style="margin: 0;">Personal Project, Jul 2022 - Oct 2022</p>
+    </div>
+
+    <!-- typing animation -->
+    <script>
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+            // console.log(fullTxt)
+
+            if (this.isDeleting) {
+                if (this.txt.length == 2)
+                    this.txt = ""
+                else
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                if (this.txt.length == 0)
+                    this.txt = fullTxt.substring(0, 2);
+                else
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+    </script>
+
+    <script>
+        drawIcon(window.innerWidth / 1728 * 60, "headerIcon", false, true);
+
+        // draw college illustration
+        let collegeIllusSvgGroup = d3.select("#collegeIllusSvg")
+            .append("svg")
+            .attr("width", 200)
+            .attr("height", 200)
+            .append("g")
+            .attr("transform", "translate(0,100)");
+
+        d3.xml("resources/svg/college.svg")
+            .then(data => {
+                collegeIllusSvgGroup.node().append(data.documentElement)
+            });
+
+
+        function changeCollegeState(inp) {
+            let curState = d3.select("#changeCollegeInput").attr("college")
+            if (curState == "undergrad") {
+                // change svg illustration
+                d3.select("#changeCollegeInput")
+                    .attr("college", "grad");
+                collegeIllusSvgGroup
+                    .transition()
+                    .duration(600)
+                    .ease(d3.easeExpInOut)
+                    .attr("transform", "translate(0,100)rotate(180,100,100)");
+
+                // hide undergard div
+                d3.select("#underGradDiv")
+                    .transition()
+                    .duration(600)
+                    .style("transform", "translate(-100px,0)")
+                    .style("opacity", "0")
+                    .on('end', () => {
+                        d3.select("#underGradDiv")
+                            .style("display", "none")
+                    });
+
+                // display grad div
+                d3.select("#gradDiv")
+                .transition()
+                    .delay(500)
+                    .style("display", "block")
+                    .on("end", () => {
+                        d3.select("#gradDiv")
+                            .transition()
+                            .duration(600)
+                            .style("transform", "translate(0,0)")
+                            .style("opacity", "1")
+                    })
+
+
+            }
+            else {
+                // change svg illustration
+                d3.select("#changeCollegeInput")
+                    .attr("college", "undergrad");
+                collegeIllusSvgGroup
+                    .transition()
+                    .duration(600)
+                    .ease(d3.easeExpInOut)
+                    .attr("transform", "translate(0,100)");
+
+                // display undergrad div
+                d3.select("#underGradDiv")
+                    .transition()
+                    .delay(500)
+                    .style("display", "block")
+                    .on("end", () => {
+                        d3.select("#underGradDiv")
+                            .transition()
+                            .duration(600)
+                            .style("transform", "translate(0,0)")
+                            .style("opacity", "1")
+                    })
+
+
+                // hide grad div
+                d3.select("#gradDiv")
+                    .transition()
+                    .duration(600)
+                    .style("transform", "translate(100px,0)")
+                    .style("opacity", "0")
+                    .on('end', () => {
+                        d3.select("#gradDiv")
+                            .style("display", "none")
+                    });
+
+            }
+
+        }
+    </script>
+
+    <!-- draw garden -->
+    <script>
+        // draw college illustration
+        let gardenGroup = d3.select("#gardenSvg")
+            .append("svg")
+            .attr("width", window.innerWidth * 0.8)
+            .attr("height", window.innerHeight * 2.4)
+            .append("g");
+
+        let projectTootipShown = false;
+        let prjIdName = ['pu', "magpaper", "sugar", "valve", "fluid", "wind", "carrot", "sustain", "marvel"];
+        let prjPosition = ['left', "right", "left", "right", "left", "right", "left", "left", "right"];
+        let prjIdGroup = ['puPrj', "magpaperPrj", "sugarPrj", "valvePrj", "fluidPrj", "windPrj", "carrotPrj", "sustainPrj", "marvelPrj", "otherLeaf"];
+        let prjName = ["INTELLITEX", "MAGPAPER", "48°C SUGAR", "MOISTVALVE", "COFLUID", "WHEN WIND BLOWS", "CARROTS WILL LEAD THE WAY", "SUSTAINKG", "MARVEL UNIVERSE"]
+        let prjExp = ["Multifunctional textile sensor design and system for bedsore prevention", `Cheap and Reconfigurable Rapid Prototyping of Haptic Interface Based on Paper`,
+            `Material Redesign of Traditional Sugar Figure Blowing Art`,
+            "A Moisture Sensory Soft Valve", `Rapid Prototyping of Fluidic Interface`, "A Visual Story of an Outrageous Social Event", "Game Demo", `Knowledge Graph Tool for Sustainable Education`, "Marvel Cinemic Universe Visualization"]
+        let prjColor = ["#89b57a", "#bfbfbf", "#e89056", "#c9da2b", "#6f65e0", "#ffc000", "#e89056", "#89b57a", "#e72718"]
+        let prjImg = ["blank", "magpaperCover", "sugarCover", "valveCover", "fluidCover", "windCover", "carrotCover", "sustainCover", "marvelCover"]
+        let prjImgWid = ["2%", "30%", "30%", "18%", "40%", "40%", "50%", "20%", "25%"]
+        let prjSkills = ["Soft Sensors Design | Wearable Devices | Data Visualization",
+            `Personal Fabrication in HCI | Material Design | Rapid Prototyping`,
+            "Material design | Human Food Interaction | User Research & Testing",
+            "Material Design | Soft Sensors Design | Ergonomics",
+            "Personal Fabrication in HCI | Rapid Prototyping",
+            "Data Visualization | Social Issue",
+            "Arduino | RaspberryPi | Unity | Computer Vision | Game Design",
+            `Data Visualization | Sustainable Education`,
+            "Data Visualization | Back-end Development"]
+        let prjOverview = ["This is an ongoing project:)",
+            `Overview: Although haptic feeling is an important aspect of prototyping, student designers may find it difficult to incorporate haptic feedback into their demos. Based on magnetic elastomers and paper, I design an easy-to-fabricate, cheap, customizable, and reconfigurable physical interface toolkit with haptic feedback. It allows designers to easily include haptic feedback in their prototypes.`,
+            "Overview: To preserve and revive the sugar figure blowing art, I want to attract GenZ by allowing them to learn about this tradition through hands-on experience. Traditionally, this art features a steep learning curve, and thus I design a new sugar material with a lower glass transition temperature that makes this art easier to learn for novices. This new material allows safe and easy diy experience and brings about many interesting interaction capacitites. ",
+            "Overview: From the technology perspective, I explore the possibilities of using smart responsive materials in the pneumatic context. This work presents a smart soft pneumatic valve that is water-responsive. It can realize logic control based on environmental humidity degree without the need for electricity, hard sensors or computer control.",
+            "Overview: CoFluid is an easy and low-cost fabrication process of fluidic channels and a compatible soft valve. It makes it easy for designers to include fluid in prototyping, providing novel visual feedback and interesting interactions.",
+            "Overview: A data visualization of public opinions on social platforms after a video of a mother of eight being locked with a chain around her neck went viral. Through this work, I want to call for more awareness and actions towards human trafficking and many other social issues alike.",
+            "Overview: Carrots will lead the way ​is a game in which players use bricks of different colors to guide a rabbit out of the puzzle. This game is an attempt of combining Arduino(C), RaspberryPi(Python), and Unity(C#) in prototyping.",
+            `Overview: It is challenging for students to adopt a systematic perspective in the problem-solving process for sustainable solutions. In respond to this challenge, we develop Sustain-KG , an online knowledge graph tool that helps students to gain well-structured knowledge in sustainability problem-solving process.`,
+            "Overview: Sometimes it's a little challenging to get the relationships of different characters in the Marvel Cinemic Universe right. This is a data visualization project that reveals the relationship of different Marvel characters, their personal attributes, and other fun facts."]
+        let prjTime = ["Personal Project, Dec 2022 - ",
+            `Personal Project, Aug 2022 - Oct 2022`,
+            "Personal Project, Aug 2022 - Oct 2022",
+            "Personal Project, Jul 2022 - Oct 2022",
+            `Group Project with Haotian Chen, Ziqing Zheng, Longxuan Chen, Zeping Jin in ZJU<br>
+                Role: structure & material developer, literary researcher<br>
+                Aug 2022 - Oct 2022
+                `,
+            "Overview: A data visualization of public opinions on social platforms after a video of a mother of eight being locked with a chain around her neck went viral. Through this work, I want to call for more awareness and actions towards human trafficking and many other social issues alike.",
+            "Overview: Carrots will lead the way ​is a game in which players use bricks of different colors to guide a rabbit out of the puzzle. This game is an attempt of combining Arduino(C), RaspberryPi(Python), and Unity(C#) in prototyping.",
+            `Overview: It is challenging for students to adopt a systematic perspective in the problem-solving process for sustainable solutions. In respond to this challenge, we develop Sustain-KG , an online knowledge graph tool that helps students to gain well-structured knowledge in sustainability problem-solving process.`,
+            `Group Project with Haotian Chen, Xinli Chen in ZJU<br>
+                Role: team leader, backend developer, interaction designer<br>
+                Nov 2021 - Dec 2021`]
+        let prjLinkPage = ['pu', "magpaper", "sugar", "valve", "fluid", "wind", "carrot", "sustain", "marvel"];
+        
+
+
+        // 改变tooltip内容函数
+        function changeTooltipInnerHTML(projectColor, projectName, projectExplain, projectImg, prjImgWid, projectSkills, projectOverview, projectTime, projectPos) {
+            d3.select(`#projectTooltipName`)._groups[0][0].innerHTML = projectName;
+            d3.select("#projectTooltipName").style("color", projectColor);
+            d3.select(`#projectTooltipExplain`)._groups[0][0].innerHTML = projectExplain;
+            d3.select(`#projectTooltipSkills`)._groups[0][0].innerHTML = projectSkills;
+            d3.select(`#projectTooltipOverview`)._groups[0][0].innerHTML = projectOverview;
+            d3.select(`#projectTooltipTime`)._groups[0][0].innerHTML = projectTime;
+            // 调整tooltip div的左右
+            console.log(projectPos)
+            if (projectPos == "left") {
+                d3.select("#projectTooltip").style("left", null);
+                d3.select("#projectTooltip").style("right", "4rem");
+            } else {
+                d3.select("#projectTooltip").style("right", null);
+                d3.select("#projectTooltip").style("left", "4rem");
+            }
+
+            d3.select("#projectTooltipImg").style("width", prjImgWid)
+            // 加载图片
+            d3.select("#projectTooltipImg")._groups[0][0].src = d3.select("#projectTooltipImg")._groups[0][0].src.split('resources/img/')[0] + "resources/img/" + projectImg + ".png"
+        }
+
+        d3.xml("resources/svg/garden3_1.svg")
+            .then(data => {
+                gardenGroup.node().append(data.documentElement)
+
+                // dom加载出svg之后再绑定交互事件
+                // 加载花朵悬停交互
+                for (let prjIndex = 0; prjIndex < prjIdName.length; prjIndex++) {
+                    d3.select(`#${prjIdName[prjIndex]}Flower`)
+                        .style("cursor", "pointer")
+                        .on("mouseover", function (d, i) {
+                            // d3.select(this).style("cursor", "pointer"); 
+                            if (!projectTootipShown) {
+                                projectTootipShown = true;
+
+                                changeTooltipInnerHTML(prjColor[prjIndex], prjName[prjIndex], prjExp[prjIndex], prjImg[prjIndex], prjImgWid[prjIndex], prjSkills[prjIndex], prjOverview[prjIndex], prjTime[prjIndex], prjPosition[prjIndex])
+
+                                d3.select("#projectTooltip")
+                                    .style("display", "block")
+                                    .style("opacity", "0")
+                                    .transition()
+                                    .delay(500)
+                                    .duration(1500)
+                                    .style("opacity", "1")
+
+                                d3.select("#projectTooltip")
+                                    .style("top", `${(document.documentElement.scrollTop || document.body.scrollTop) + window.innerHeight / 2 - document.getElementById("projectTooltip").offsetHeight / 2}px`)
+
+                                let cxRot = d3.select(`#${prjIdName[prjIndex]}Flower`).select("circle").attr("cx")
+                                let cyRot = d3.select(`#${prjIdName[prjIndex]}Flower`).select("circle").attr("cy")
+
+                                let curRot;
+                                if (d3.select(`#${prjIdName[prjIndex]}Flower`).attr("transform"))
+                                    curRot = parseFloat(d3.select(`#${prjIdName[prjIndex]}Flower`).attr("transform").split(",")[0].split("(")[1])
+                                else
+                                    curRot = 0;
+
+                                // 透明化没选中的
+                                prjIdGroup.forEach(element => {
+                                    d3.select(`#${element}`)
+                                        .style("opacity", 0.2)
+                                })
+                                // 高亮选中的
+                                d3.select(`#${prjIdName[prjIndex]}Prj`)
+                                    .style("opacity", 1)
+
+                                d3.select(`#${prjIdName[prjIndex]}Flower`)
+                                    .transition()
+                                    .duration(2000)
+                                    .ease(d3.easeCubicInOut)
+                                    .attrTween('transform', function (d, i, a) {
+                                        return d3.interpolateString(`rotate(${curRot}, ${cxRot}, ${cyRot})`,
+
+                                            `rotate(${curRot + 144}, ${cxRot}, ${cyRot})`);
+                                    });
+                            }
+                        })
+                        .on("mouseleave", function (d, i) {
+                            prjIdGroup.forEach(element => {
+                                d3.select(`#${element}`)
+                                    .style("opacity", 1)
+                            })
+                            projectTootipShown = false;
+                            d3.select("#projectTooltip")
+                                .transition()
+                                .duration(10)
+                                .style("opacity", "0")
+                                .style("display", "none")
+                        })
+                        .on("click", function (d, i){
+                            if(prjLinkPage[prjIndex] == "wind")
+                            {
+                                window.location.assign(`https://yuechengpeng.github.io/Fengxian_Visualization_Project_2022/project/`) 
+                            }else{
+                                window.location.assign(`${prjLinkPage[prjIndex]}.html`) 
+                            }
+                        })
+                }
+
+
+                // wind Flower悬停
+                // // valve 悬停
+                // d3.select("#windFlower")
+                //     .on("mouseover", function (d, i) {
+                //         if (!projectTootipShown) {
+                //             projectTootipShown = true;
+
+                //             changeTooltipInnerHTML(prjColor[5], prjName[5], prjExp[5], prjImg[5], prjImgWid[5])
+
+                //             d3.select("#projectTooltip")
+                //                 .style("display", "block")
+                //             d3.select("#projectTooltip")
+                //                 .style("top", `${(document.documentElement.scrollTop || document.body.scrollTop) + window.innerHeight / 2 - document.getElementById("projectTooltip").offsetHeight / 2}px`)
+
+                //             let cxRot = d3.select("#windFlower").select("circle").attr("cx")
+                //             let cyRot = d3.select("#windFlower").select("circle").attr("cy")
+
+                //             let curRot;
+                //             if (d3.select("#windFlower").attr("transform"))
+                //                 curRot = parseFloat(d3.select("#windFlower").attr("transform").split(",")[0].split("(")[1])
+                //             else
+                //                 curRot = 0;
+
+                //             // 透明化没选中的
+                //             prjIdGroup.forEach(element => {
+                //                 d3.select(`#${element}`)
+                //                     .style("opacity", 0.2)
+                //             })
+                //             // 高亮选中的
+                //             d3.select(`#windPrj`)
+                //                     .style("opacity", 1)
+
+                //             d3.select("#windFlower")
+                //                 .transition()
+                //                 .duration(2000)
+                //                 .ease(d3.easeCubicInOut)
+                //                 .attrTween('transform', function (d, i, a) {
+                //                     return d3.interpolateString(`rotate(${curRot}, ${cxRot}, ${cyRot})`,
+
+                //                         `rotate(${curRot + 144}, ${cxRot}, ${cyRot})`);
+                //                 });
+                //         }
+                //     })
+                //     .on("mouseleave", function (d, i) {
+                //         // 恢复透明度
+                //         prjIdGroup.forEach(element => {
+                //                 d3.select(`#${element}`)
+                //                     .style("opacity", 1)
+                //             })
+
+                //         projectTootipShown = false;
+                //         d3.select("#projectTooltip")
+                //             .style("display", "none")
+
+                //     })
+            });
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

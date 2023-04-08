@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="resources/img/tabIcon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Carrot will lead the way</title>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- outline Import CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/outline.css">
+    <!-- outline Import the library -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/DocumentOutline.js"></script> -->
+    <script src="js/DocumentOutline.js"></script>
+
+</head>
+
+<body style="margin: 0 4rem 0 4rem;">
+    <script src="js/iconDraw.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <!-- header -->
+    <div class="glassmorphismHeader" style="display: flex; justify-content: space-between; position: sticky; top: 0;">
+        <!-- icon & name -->
+        <div style="display: flex; align-items: center; margin: 0 0 0 0.5rem;">
+            <div id="headerIcon"></div>
+            <p class="headerP" style="margin: 0;">Yuecheng Peng</p>
+        </div>
+
+        <!-- pages -->
+        <div style="display: flex; align-items: center; margin: 0 0.5rem 0 0">
+            <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect" href="home.html"> Yuecheng's Garden of Design</a>
+            </div>
+            <!-- <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect">Grad Works</a>
+            </div> -->
+            <div>
+                <a class="headerPageP cannotselect" href="aboutme.html" target="_self">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 10rem 20rem 0rem 20rem;">
+        <div style="margin-bottom: 10rem;">
+            <p class="designName" style="color: #e89056;">CARROTS WILL LEAD THE WAY</p>
+            <p class="designName" style="font-size:3rem; margin-bottom: 5rem;">Game Demo</p>
+            <p>May 2022 (finished in 2 weeks)</p>
+            <p>Project completed at Zhejiang University with Xiuyang Wu, Zhiyu Xie</p>
+            <p>Role : Team leader, C# developer (Unity), scene & UI & story designer </p>
+            <p>​Instructor: Weitao You, Lingyun Sun</p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>VIDEO DEMONSTRATION</h2>
+            <p>This video below incorporates the background and demonstration of our game. If you want to have a quick
+                glimpse into what our game is about, check this video out! ☺️ </p>
+            <video src="resources/video/carrot/bunnyProject.mp4" style="width: 100%;" controls></video>
+
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>INTRODUCTION</h2>
+            <p>We wanted to build an interactive prototype of a puzzle-solving block toy. The game's goal is to lead the
+                rabbit to eat all the carrots in a maze. Meanwhile, there are invisible traps, players need to refer to
+                the LED dot-matrix display to figure out where these traps locate. Different colors of blocks represent
+                different moves of the rabbit, including "forward", "clockwise turn", "anticlockwise turn", and "loop".
+                The player can send movement command sequences to the rabbit by assembling blocks differently. </p>
+            <p>We got this fantastic inspiration from one <a
+                    href="https://www.google.com/doodles/celebrating-50-years-of-kids-coding" target=”_blank”
+                    style="text-decoration: underline;">Google Doodle game</a>. </p>
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <img src="resources/img/carrot/carrotIntro.webp" alt="" style="width: 50%; ">
+            </div>
+
+            <p>Additionally, in a technical sense, this is one of our attempts to combine Arduino, Raspberry Pi, and
+                computer -- three most commonly used platforms for prototyping -- in one project, and achieve
+                communication among them. </p>
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <img src="resources/img/carrot/rasp_Ard_Uni.webp" alt="" style="width: 50%; ">
+            </div>
+        </div>
+        <div style="margin-bottom: 6rem;">
+            <h2>GAME BACKGROUND</h2>
+            <p>Nika the Rabbit is your best friend. You can feel that something special of her is attracting you...
+                Together you live happily.</p>
+            <p>One day, suddenly, a dark elf kidnapped Nika. "Haaaa! I gonna absorb her Rabbit Power for my magic
+                powder!". Poor Nika thus got prisoned in a maze built by dark spell.</p>
+            <p>Burning with anxiety, you turned to a just Magician. He gave you a box and said "make full use of this
+                magic box... and you can guide your friend out of the spell maze!"</p>
+            <p>When you were about to ask how to use the box exactly, he disappeared in a puff of smoke.</p>
+            <p style="margin-bottom: 2rem;">Upon the box you fixed your eyes, and it wrote "<i>Carrots will Lead the
+                    Way</i> "</p>
+            <div style="display: flex; justify-content: center;">
+                <img src="resources/img/carrot/carrotsLeadWay.webp" alt="" style="width: 80%; ">
+            </div>
+        </div>
+        <div style="margin-bottom: 4rem;">
+            <h2>GAME DESIGN</h2>
+            <h3>Interaction process</h3>
+            <p>All hardwares (Arduino, Raspberry Pi, etc.) are placed in a game box. Players place blocks on this box
+                and can check some important information (progress of the game level and trap locations) on the box.
+                Plus, we used a computer to run our Unity program. </p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/carrot/interactionProcess.webp" alt="" style="width: 80%; ">
+            </div>
+            <p style="margin-bottom: 2rem;">The playing process is simple:</p>
+            <div class="row" style="display: flex;">
+                <div class="col">
+                    <img src="resources/img/carrot/process_1.webp" alt="" style="height: 20%; margin-bottom: 4rem;">
+                    <p>➊ Analyze Maze</p>
+                    <p>Players can see the maze on the computer (Unity) and check out whether there is any trap using
+                        the map (LED dot-matrix) on the game box.</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/carrot/process_2.webp" alt="" style="height: 20%; margin-bottom: 4rem;">
+                    <p>❷ Place Blocks</p>
+                    <p>Player place blocks and hit button1 to take a picture of blocks, which will be translated into
+                        movement command sequence to send to the computer</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/carrot/process_3.webp" alt="" style="height: 20%; margin-bottom: 4rem;">
+                    <p>❸ Get Result</p>
+                    <p>Unity will run this sequence to see whether can the rabbit eat all carrots. If successful, the
+                        progress indicator (a rabbit) will jump one step forward.</p>
+                </div>
+            </div>
+            <p>​Judgment for winning & losing: </p>
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="background-color: #e89056;">Game Result</td>
+                            <td style="background-color: #e89056;">Conditions</td>
+                            <td style="background-color: #e89056;">Feedback</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Fail</td>
+                            <td>step into trap</td>
+                            <td>fail sound effect</td>
+                        </tr>
+                        <tr>
+                            <!-- <td></td> -->
+                            <td>leave carrots uneaten</td>
+                            <td>stop after executing movement sequence&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Success</td>
+                            <td>eat all carrots</td>
+                            <td>success sound effect &amp; progress indicator (rabbit) jump a step forward</td>
+                        </tr>
+                    </tbody>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                </table>
+            </div>
+            <h3>Building blocks</h3>
+            <p>Four different colors are used in blocks to represent four different movement commands:</p>
+            <div class="row" style="display: flex;    justify-content: space-between;">
+                <div class="col" style="display: flex; flex-direction: column; align-items: center;">
+                    <div
+                        style="height: 8rem; width: 8rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 1rem;">
+                    </div>
+                    <p>jump one step forward</p>
+                </div>
+                <div class="col" style="display: flex; flex-direction: column; align-items: center;">
+                    <div
+                        style="height: 8rem; width: 8rem; border-radius: 1rem; background-color: #ad3e31; margin-bottom: 1rem;">
+                    </div>
+                    <p>anticlockwise turn</p>
+                </div>
+                <div class="col" style="display: flex; flex-direction: column; align-items: center;">
+                    <div
+                        style="height: 8rem; width: 8rem; border-radius: 1rem; background-color: #dc9cc7; margin-bottom: 1rem;">
+                    </div>
+                    <p>clockwise turn</p>
+                </div>
+                <div class="col" style="display: flex; flex-direction: column; align-items: center;">
+                    <div
+                        style="display: flex;height: 8rem; width: 8rem; border-radius: 1rem; background-color: #548a39; margin-bottom: 1rem;justify-content: space-between;">
+                        <div
+                            style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; transform: translate(0.5rem, 0.5rem);">
+                        </div>
+                        <div
+                            style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; transform: translate(0, 3rem);">
+                        </div>
+                        <div
+                            style="height: 2rem; width: 2rem; border-radius: 2rem; background-color: #fff; transform: translate(-0.5rem, 5.5rem);">
+                        </div>
+                    </div>
+                    <p>loop</p>
+                    <p style="width: 10rem;">(dice-like loop block, number represents times of loop)</p>
+                </div>
+            </div>
+            <p>Players place blocks from left to right to send sequential movement command to the rabbit, place blocks
+                on the top of the loop block to incorporate movement in the loop body. For example:</p>
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col">
+                    <img src="resources/img/carrot/blockExp_1.webp" alt="" style="height: 20rem;">
+                    <p>​jump two steps forward</p>
+                    <div style="display: flex;">
+                        <div
+                            style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 1rem;margin-right: 1rem;">
+                        </div>
+                        <div
+                            style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 1rem;">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <img src="resources/img/carrot/blockExp_2.webp" alt="" style="height: 20rem;">
+                    <p>​​jump one step, clockwise turn, jump one step</p>
+                    <div style="display: flex;">
+                        <div
+                            style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 1rem;margin-right: 1rem;">
+                        </div>
+                        <div
+                            style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #dc9cc7; margin-bottom: 1rem;margin-right: 1rem;">
+                        </div>
+                        <div
+                            style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 1rem;">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/carrot/blockExp_3.webp" alt="" style="width: 80%; ">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Jump two steps, clockwise turn, jump two steps, clockwise turn, and jump
+                        one step. In this description, we can actually use a loop to solve it.</p>
+                    <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <div
+                                style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #dc9cc7; margin-bottom: 0.4rem;margin-right: 0.4rem;">
+                            </div>
+                            <div
+                                style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 0.4rem;margin-right: 0.4rem;">
+                            </div>
+                            <div
+                                style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 0.4rem;margin-right: 0.4rem;">
+                            </div>
+                            <div
+                                style="display: flex;height: 4rem; width: 4rem; border-radius: 1rem; background-color: #548a39; margin-bottom: 1rem;justify-content: space-between;">
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(0.5rem, 0.5rem);">
+                                </div>
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(-0.5rem, 2.5rem);">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-top: 13.2rem;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>Furthermore, we can simplify it by letting the loop body run for 3 times, since the game's goal
+                        is just to eat all carrots.</p>
+                    <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <div
+                                style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #dc9cc7; margin-bottom: 0.4rem;margin-right: 0.4rem;">
+                            </div>
+                            <div
+                                style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 0.4rem;margin-right: 0.4rem;">
+                            </div>
+                            <div
+                                style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 0.4rem;margin-right: 0.4rem;">
+                            </div>
+                            <div
+                                style="display: flex;height: 4rem; width: 4rem; border-radius: 1rem; background-color: #548a39; margin-bottom: 1rem;justify-content: space-between;">
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(0.5rem, 0.5rem);">
+                                </div>
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(0rem, 1.5rem);">
+                                </div>
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(-0.5rem, 2.5rem);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>We can also build multi-loops. Sometimes it can be useful when there is limited vertical space
+                        for blocks to place.</p>
+                    <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+                            <div
+                                style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #dc9cc7; margin-bottom: 0.4rem;margin-right: 0.4rem;">
+                            </div>
+                            <div
+                                style="height: 4rem; width: 4rem; border-radius: 1rem; background-color: #242f97; margin-bottom: 0.4rem;margin-right: 0.4rem;">
+                            </div>
+                            <div
+                                style="display: flex;height: 4rem; width: 4rem; border-radius: 1rem; background-color: #548a39; margin-bottom: 1rem;justify-content: space-between;">
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(0.5rem, 0.5rem);">
+                                </div>
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(-0.5rem, 2.5rem);">
+                                </div>
+                            </div>
+                            <div
+                                style="display: flex;height: 4rem; width: 4rem; border-radius: 1rem; background-color: #548a39; margin-bottom: 1rem;justify-content: space-between;">
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(0.5rem, 0.5rem);">
+                                </div>
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(0rem, 1.5rem);">
+                                </div>
+                                <div
+                                    style="height: 1rem; width: 1rem; border-radius: 2rem; background-color: #fff; transform: translate(-0.5rem, 2.5rem);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h3>Traps</h3>
+            <p>To make the game more challenging, we design a <span style="color: #c47948;">trap mechanism</span>.
+                Specifically, there are several "trap bricks" in the maze (looking just like normal bricks) but once the
+                rabbit jumps onto a trap brick, the player will lose the game.</p>
+            <p>Players can check out where these traps locate by referring to the <span style="color: #c47948;">LED
+                    dot-matrix display</span> on the game box, where traps and the position of the rabbit will both be
+                marked out by LED light. There are four dimensions on the dot-matrix map, players can use a button to
+                switch between different perspectives.</p>
+            <p style="margin-bottom: 2rem;">The example below shows a maze without traps and the LED light position
+                represents the location of the rabbit. As a result, we can figure out which dimension is displayed
+                according to the position of the rabbit.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 8rem;">
+                <img src="resources/img/carrot/trap1.webp" alt="" style="width: 100%; ">
+            </div>
+            <p style="margin-bottom: 2rem;">This is a example of how LED dot-matrix display shows the location of traps.
+            </p>
+            <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+                <img src="resources/img/carrot/trap2.webp" alt="" style="width: 100%; ">
+            </div>
+            <h3>Game play</h3>
+            <p>To make the game more interesting and challenging, we place a limit on <span style="color: #c47948;">the
+                    number of blocks of each color</span> (5 blocks per color), and the <span
+                    style="color: #c47948;">maximum number of blocks that can be placed vertically and
+                    horizontally</span> (horizontally: max 5 blocks, vertically: max 4 blocks). This will lead to some
+                very interesting solutions to the maze.</p>
+            <div style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 4rem;">
+                <img src="resources/img/carrot/gameplay1.webp" alt="" style="width: 80%; ">
+            </div>
+            <div class="row">
+                <div class="col" style="display: flex; flex-direction: column; align-items: center;">
+                    <p>In this case, if we use a normal way to place the blocks, it will look like:</p>
+                    <img src="resources/img/carrot/gameplay_2.webp" alt="" style="width: 60%; ">
+                    <p>However, we use 6 horizontal positions, more than the maximum number allowed for horizontal
+                        blocks.</p>
+
+                </div>
+                <div class="col" style="display: flex; flex-direction: column; align-items: center;">
+                    <p>Therefore, we can place the blue and the red block on the top of a loop block, using vertical
+                        "complexity" to replace horizontal "complexity"</p>
+                    <img src="resources/img/carrot/gameplay_3.webp" alt="" style="width: 50%; ">
+                </div>
+
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>HARDWARE</h2>
+            <h3>Function design</h3>
+            <p style="margin-bottom: 4rem;">To achieve the game design mentioned above, we use a computer (run Unity),
+                Arduino, and Raspberry Pi. Specifically, they do the following things respectively.</p>
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col-3" style="display: flex; justify-content: center;">
+                    <img src="resources/img/carrot/rasp.webp" alt="" style="height: 50%; ">
+                </div>
+                <div class="col-9">
+                    <li>after pushing the map switching button, change the dimension of the map</li>
+                    <li>after pushing the upload button, take a picture of the blocks and convert it into a movement
+                        command sequence using the CV algorithm.</li>
+                    <li>send the sequence to Unity and receive the game result sent from the computer.</li>
+                    <li>if successfully pass the level, send a success signal to Arduino by USB serial</li>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col-3" style="display: flex; justify-content: center;">
+                    <img src="resources/img/carrot/unity.webp" alt="" style="height: 50%; ">
+                </div>
+                <div class="col-9">
+                    <li>​build a server using C# to receive the sequence sent from the Raspberry Pi and send the game
+                        result back to Raspberry Pi.</li>
+                    <li>build game scene and implement logic (decoded the sequence into the movement of the rabbit and
+                        judgement of game success).</li>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3" style="display: flex; justify-content: center;">
+                    <img src="resources/img/carrot/arduino.webp" alt="" style="height: 50%; ">
+                </div>
+                <div class="col-9">
+                    <li>receive the success signal sent from Raspberry Pi and control the rotation of the servo motor.
+                    </li>
+                    <li>refresh traps shown on the LED dot-matrix display once receive the signal to change the
+                        dimension of the map.</li>
+
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/carrot/hardwareSys.webp" alt="" style="width: 100%; ">
+            </div>
+            <p style="margin-bottom: 4rem;">We used Arduino to control the servo motor because we found that using <span
+                    style="color: #c47948;">GPIO or pigpio port from Python</span> on Raspberry Pi cannot control the
+                angle of the servo and its moving speed stably. Using Arduino, on the other hand, provides easy and
+                reliable control on the servo motor.</p>
+            <h3>Communications</h3>
+            <p style="margin-bottom: 2rem;">We used Websoket and USB Serial to realize the communication between
+                computer, Raspberry Pi, and Arduino. Besides, we used different languages on these platforms, thus we
+                also achieved communication between different programming languages (C#, Python, and C).</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/carrot/comm.webp" alt="" style="width: 100%; ">
+            </div>
+            <p>build a websocket server on Unity (C#), to communicate between computer and Raspberry Pi:</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/carrot/unityCsharp.webp" alt="" style="width: 100%; ">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>sending message from Raspberry Pi to Arduino using Serial write (Python):</p>
+                    <img src="resources/img/carrot/raspCoding.webp" alt="" style="width: 100%; ">
+
+                </div>
+                <div class="col" style="display: flex; flex-direction: column; align-items: center;">
+                    <p>receive message from Raspberry Pi using Serial.read() function on Arduino (C):</p>
+                    <img src="resources/img/carrot/ardCoding.webp" alt="" style="width: 60%; ">
+                </div>
+
+            </div>
+            <h3>progress indicator</h3>
+            <p>We used a progress indicator (a rabbit) on the game box to indicate the progress of the game. When players
+                pass one level, the rabbit will "jump" one step toward the destination. It is, however, quite
+                challenging to animate the "jump" action of a rabbit physically. To achieve that, we design a ingenious
+                mechanic:</p>
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col">
+                    <img src="resources/img/carrot/progressInd.webp" alt="" style="width: 100%; ">
+                </div>
+                <div class="col">
+                    <p style="margin-top: 4rem;">We used magnets to achieve a "non-invasive" way to move the rabbit. In
+                        this way, we can guarantee the integrity of the game board: we did not need to drill holes or
+                        tracks on it.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 4rem;">Furthermore, through our experiment, we found that the rabbit can
+                        literally "jump" under proper friction and speed of servo motor:</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/carrot/rabbitJump.gif" alt="" style="width: 100%; ">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin: 8rem 0 0 0; padding: 0 0 2rem 0;">
+        <p style="text-align: center;">© 2023 All rights reserved by Yuecheng Peng. </p>
+    </div>
+
+
+    <script>
+        drawIcon(window.innerWidth / 1728 * 60, "headerIcon", false, true);
+        let outline = new DocumentOutline({
+            backgroundColor: '#2c2c2c',
+            textColor: 'white',
+            textColorLight: 'lightgrey',
+            accentColor: '#e89056',
+            defaultOpen: false
+        });
+        d3.select(".outline-nav")
+            .style("z-index", "99")
+    </script>
+
+</body>
+
+</html>

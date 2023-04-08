@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="resources/img/tabIcon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- outline Import CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/outline.css">
+    <!-- outline Import the library -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/DocumentOutline.js"></script> -->
+    <script src="js/DocumentOutline.js"></script>
+
+
+    <title>Sustain KG</title>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body style="margin: 0 4rem 0 4rem;">
+    <script src="js/iconDraw.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <!-- header -->
+    <div class="glassmorphismHeader" style="display: flex; justify-content: space-between; position: sticky; top: 0;">
+        <!-- icon & name -->
+        <div style="display: flex; align-items: center; margin: 0 0 0 0.5rem;">
+            <div id="headerIcon"></div>
+            <p class="headerP" style="margin: 0;">Yuecheng Peng</p>
+        </div>
+
+        <!-- pages -->
+        <div style="display: flex; align-items: center; margin: 0 0.5rem 0 0">
+            <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect" href="home.html"> Yuecheng's Garden of Design</a>
+            </div>
+            <!-- <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect">Grad Works</a>
+            </div> -->
+            <div>
+                <a class="headerPageP cannotselect" href="aboutme.html" target="_self">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 10rem 20rem 0rem 20rem;">
+        <div style="margin-bottom: 10rem;">
+            <p class="designName" style="color: #c9da2b;">MOISTVALVE</p>
+            <p class="designName" style="font-size:3rem; margin-bottom: 5rem;">A Moisture Sensory
+                Soft Valve</p>
+            <p>Aug 2022 - Oct 2022</p>
+            <p>Personal project completed at Zhejiang University</p>
+            <p>Advisor: Guanyun Wang, Jackie Wang </p>
+
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>ABSTRACT</h2>
+            <p>This work presents a smart <span style="color: #c9da2b;">soft pneumatic valve</span> that is
+                water-responsive without the need for hard sensors or computer control. Specifically, the valve uses a
+                human-safe hydrogel that responds to humidity and a “kink” structure. I describe different materials and
+                valve structures tested and iterated. Finally, I show several applications of this design and discuss
+                opportunities for future work.</p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>INTRODUCTION</h2>
+            <h3>Pneumatics+Responsive materials: 1+1>2 ?</h3>
+            <p>Pneumatic products and robots are very popular these days because they guarantee safer human-computer
+                interaction, features lightweight, resistance to impacts, etc. However, current pneumatic products
+                mainly use silicon gel as its material. Therefore I wonder if there will be sparks when we use smart
+                responsive materials in them.</p>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/valve/intro_1@4x.png" alt="" style="width: 75%;">
+            </div>
+            <h3>Design of <i>the MoistValve</i> </h3>
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col">
+                    <p>With the insight, I designed a smart soft pneumatic valve that can convert the environment humidity
+                        degree into logic signal (valve open & close). </p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                        <img src="resources/img/valve/intro_2@4x.png" alt="" style="width: 45%;">
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <img src="resources/img/valve/designofvalve_2@4x.png" alt="" style="width: 75%;">
+            </div>
+
+        </div>
+
+        <div style="margin-bottom: 8rem;">
+            <h2>RELATED WORKS</h2>
+            <h3>Soft Sensors</h3>
+            <p>Traditional rigid sensors are incompatible with soft products. Therefore researchers begin looking for
+                soft substitutes.</p>
+
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 2rem;">
+                <img src="resources/img/valve/softSensor.png" alt="" style="width: 75%;">
+                <p style="text-align: center;">Wyss Institute uses microchannels to measure the motion of hands. [1]</p>
+            </div>
+            <h4 style="margin-bottom: 1.2rem;">research opportunities</h4>
+            <div class="row" style="margin-bottom: 3rem;">
+                <div class="col">
+                    <p>current research on soft sensors mainly focuses on the measurement of <span
+                            style="color: #c9da2b;">mechanical variables</span></p>
+                    <img src="resources/img/valve/softSenOppo_1.png" alt="" style="width: 75%;">
+
+                </div>
+                <div class="col">
+                    <p>current research on soft sensors mainly focuses on the measurement of <span
+                            style="color: #c9da2b;">mechanical variables</span></p>
+                    <img src="resources/img/valve/softSenOppo_2.png" alt="" style="width: 75%;">
+                </div>
+            </div>
+
+            <h3>Physical Intelligence </h3>
+            <p>Physical intelligence means utilize smartly designed <span style="color: #c9da2b;">structures</span> and
+                <span style="color: #c9da2b;">materials</span> to encodes sensing, actuation, control, etc. into the
+                body of an agent. [2]
+            </p>
+            <div class="row" style="margin-bottom: 1.2rem;">
+                <div class="col">
+                    <img src="resources/img/valve/ketchup.png" alt="" style="height: 20rem;">
+                    <p>Researchers designed a pressure valve to control soft robots without chips. [3]</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/valve/rotini.png" alt="" style="height: 12rem; margin: 4rem 0 4rem 0">
+                    <p>Rotini-like soft robots that can navigate complex environments on their own. [4]</p>
+                </div>
+            </div>
+
+            <h4>reseearch goal</h4>
+            <p style="margin-bottom: 3rem;"> I chose physical intelligence as the design paradigm: I wanted to develop a
+                smart pneumatic valve as a
+                physical terminal, which could translate the environmental humidity degree into physical signals.</p>
+
+            <h3>Humidity-Responsive Materials</h3>
+            <p>Following the paradigm of physical intelligence, I start to look for different materials that respond to
+                humidity.</p>
+            <div class="row" style="margin-bottom: 4rem;">
+                <div class="col-5">
+                    <img src="resources/img/valve/biologic.png" alt="" style="width: 100%; transform: rotate(338deg);">
+                </div>
+                <div class="col-7" style="padding-left: 4rem;">
+                    <p style="margin-bottom: 4rem;">⬅️ BioLogic uses natto cells as humidity-sensitive nanoactuator to
+                        create responsive bio-skin. [5]</p>
+                    <img src="resources/img/valve/responsive wood.png" alt="" style="width: 90%;">
+                    <p>⬆️ physically programmed wood can self-transform based on humidity [6]</p>
+                </div>
+            </div>
+
+            <h4>material opportunity</h4>
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 3rem;">A more promising material in pneumatic context is hydrogels: they are
+                        soft and highly water-absorbant.</p>
+                </div>
+                <div class="col">
+                    <div
+                        style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 2rem; align-items: center;">
+                        <img src="resources/img/valve/matePoop.png" alt="" style="width: 90%;">
+                        <p>water-responsive hydrogel-textile composites [7]</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Shape-changing Hydrogel Valve Structures</h3>
+            <p>Reversibly deformable hydrogels responsive to various external stimuli such as temperature, light, and PH
+                have been widely applied to the design of valve structures.</p>
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 2rem; align-items: center;">
+                <img src="resources/img/valve/hydroValve2@4x.png" alt="" style="width: 56%;">
+            </div>
+            <h4 style="margin-bottom: 2rem;">research opportunity</h4>
+            <div class="row">
+                <div class="col">
+                    <div class="row" style="display: flex;">
+                        <div class="col" style="display: flex; align-items: center; flex-direction: column;">
+                            <img src="resources/img/valve/temp Icon@4x.png" alt=""
+                                style="height: 3rem; margin:0.5rem 0 1rem 0;">
+                            <p style="text-align: center;">temperature [8]</p>
+                        </div>
+                        <div class="col" style="display: flex; align-items: center; flex-direction: column;">
+                            <img src="resources/img/valve/lightIcon@4x.png" alt=""
+                                style="height: 3rem; margin:0.5rem 0 1rem 0;">
+                            <p style="text-align: center;">light [9]</p>
+                        </div>
+                        <div class="col" style="display: flex; align-items: center; flex-direction: column;">
+                            <img src="resources/img/valve/PHIcon@4x.png" alt=""
+                                style="height: 3rem; margin:0.5rem 0 1rem 0;">
+                            <p style="text-align: center;">PH [10]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>➊ Shape-changing hydrogels responsive to various types of external stimuli have been developed,
+                        however, humidity has not been considered an external stimulus. </p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 2rem;">
+                <div class="col">
+                    <div style="display: flex; align-items: center; flex-direction: column;">
+                        <img src="resources/img/valve/interactionIcon@4x.png" alt=""
+                            style="height: 4rem; margin:0rem 0 1rem 0;">
+                    </div>
+                </div>
+                <div class="col">
+                    <p>❷ These valve structures have not be implemented for interaction purposes. </p>
+                </div>
+            </div>
+            <h3 style="margin-top: 2rem;">Conclusion</h3>
+            <p>The proposed physically intelligent soft pneumatic valve based on responsive hydrogel materials is worth
+                researching because relevant fields haven't been fully researched.</p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>STRUCTURE DESIGN</h2>
+            <h3>What Valve Structure to Use?</h3>
+            <p>There are two types of hydrogel valve structures: <span style="color: #c9da2b;">direct</span> and <span
+                    style="color: #c9da2b;">indirect</span> valves.</p>
+            <div class="row">
+                <div class="col">
+                    <h4>option 1: direct valves</h4>
+                    <p>Direct valves use the responsive swelling of hydrogels placed directly in the flow to be
+                        controlled. </p>
+                    <img src="resources/img/valve/directValve@4x.png" alt=""
+                        style="width: 70%; margin:0.5rem 0 1rem 0;">
+
+                </div>
+                <div class="col">
+                    <h4>option 2: indirect valves</h4>
+                    <p>Hydrogels are not placed directly in the flow, and their swelling triggers structures to restrict
+                        the flow.</p>
+                    <img src="resources/img/valve/indirectValve@4x.png" alt=""
+                        style="width: 70%; margin:0.5rem 0 1rem 0;">
+                </div>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <div
+                    style="width: 1.2rem; height: 1.2rem; background-color: #c9da2b; border-radius: 2rem; margin-right: 1rem;">
+                </div>
+                <p style="margin: 0;">humidity-responsive hydrogel</p>
+            </div>
+            <div class="row" style="margin-top: 2rem;">
+                <div class="col">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <img src="resources/img/valve/cross.svg" alt="" style="height: 1.4rem; margin-right: 1rem;">
+                        <p style="margin: 0;">unreliable air impermeability</p>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/valve/cross.svg" alt="" style="height: 1.4rem; margin-right: 1rem;">
+                        <p style="margin: 0;">unable to respond to air humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <img src="resources/img/valve/check_1.svg" alt="" style="height: 1.4rem; margin-right: 1rem;">
+                        <p style="margin: 0;">reliable air impermeability</p>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/valve/check_1.svg" alt="" style="height: 1.4rem; margin-right: 1rem;">
+                        <p style="margin: 0;">able to respond to air humidity</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <p style="margin-top: 1.4rem;">After analysis, I chose the indirect valve structure to continue my
+                design</p>
+
+            <h3 style="margin-top: 4rem;">How to Open & Close the Valve?</h3>
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 3rem;">Inspired by a Harvard research[11], I found that the <span
+                            style="color: #c9da2b;">kink valve</span> can
+                        be used to switch on and off the flow of air. </p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/openCloseValve@4x.png" alt="" style="width: 80%;">
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;">I used elastomeric tubes to test different modes and parameters of the kink.</p>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img src="resources/img/valve/tubeTest2@4x.png" alt="" style="width: 80%;">
+            </div>
+
+            <h4>challenge</h4>
+            <p>Using elastomeric tubes will make the open and close of the valve irreversible.</p>
+
+            <h3 style="margin-top: 4rem;">How to Make the Kink Valve Reversible?</h3>
+            <p style="margin-bottom: 2rem;">First we need to identify why the kink formation is irreversible for
+                elastomeric tubes. </p>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img src="resources/img/valve/reverKink@4x.png" alt="" style="width: 75%;">
+            </div>
+            <p style="margin-top: 2rem;">As a result, I tried to cast a U-shape tube to eliminate the stress of bending.
+            </p>
+            <div class="row">
+                <div class="col">
+                    <h4>challenge - 1</h4>
+                    <p>It is difficult to 3d print the inner U-shape mold accurately because its rounded-shape and its
+                        size is relatively small.</p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/revChallenge1@4x.png" alt="" style="width: 80%;">
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>solution - 1</h4>
+                    <p>I directly used PLA filament to fabricate the inner mold.</p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/revSolution1@4x.png" alt="" style="width: 90%;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h4>challenge - 2</h4>
+                    <p>It was hard to remove inner mold after the silica gel cures because the inner mold is U-shaped.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/revChallenge2@4x.png" alt="" style="width: 90%;">
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>solution - 2</h4>
+                    <p>I heated the inner mold to make it softer and easier to remove.</p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/revSolution2@4x.png" alt="" style="width: 65%;">
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin: 2rem 0 1rem 0;">Here is the video of the fabrication process of the U-shape tube: </p>
+            <video src="resources/video/valve/u-tube1 Fabrication.mp4" style="width: 100%;" controls></video>
+
+
+            <h4 style="margin-top: 2rem;">result</h4>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <img src="resources/img/valve/revRes2@4x.png" alt="" style="width: 30%;">
+                <p>stable & reversible kink formation</p>
+            </div>
+
+            <h3 style="margin-top: 4rem;">How to Trigger the Kink Valve?</h3>
+            <p>I designed a monostable membrane to trigger formation of kink using swelling of gels.</p>
+            <div
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 1rem 0 1rem 0;">
+                <img src="resources/img/valve/triggerKink1@4x.png" alt="" style="width: 70%;">
+            </div>
+            <p style="opacity: 0.6;">*monostable: after pushed down, the membrane can auto bounce back</p>
+
+            <p>Then I used a three-part-mold and silicon gel to cast this body.</p>
+            <div
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 1rem 0 1rem 0;">
+                <img src="resources/img/valve/monoFab@6x.png" alt="" style="width: 86%;">
+            </div>
+
+            <p style="margin: 2rem 0 1rem 0;">Here is the video of the fabrication process of the membrane: </p>
+            <video src="resources/video/valve/monoMemb.mp4" style="width: 100%; margin-bottom: 4rem;" controls></video>
+
+            <p>Next, I combined the kink with the membrane to test whether the valve works. However, I found the
+                deformation of the monostable membrane cannot always trigger the kink valve.</p>
+
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col">
+                    <h4>challenge</h4>
+                    <p>cannot form kink stably</p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/triggerChallenge@4x.png" alt="" style="width: 80%;">
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>solution</h4>
+                    <p>make the tube head bigger & harder </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/triggerSolution@4x.png" alt="" style="width: 70%;">
+                    </div>
+                </div>
+            </div>
+
+            <p>To test whether this solution can work, I cast tube in 3 parts and stick them together.</p>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img src="resources/img/valve/tubeCast@6x.png" alt="" style="width: 35%;">
+            </div>
+
+            <h4>result</h4>
+            <p>After test, this kink structure cooperate better with the membrane.</p>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img src="resources/img/valve/tube_2Res@6x.png" alt="" style="width: 34%;">
+            </div>
+            <p style="margin: 2rem 0 1rem 0;">Here is the video of the fabrication process of the new U-shape tube:</p>
+            <video src="resources/video/valve/u-tube2 Fabrication.mp4" style="width: 100%;" controls></video>
+
+
+            <h3 style="margin-top: 4rem;">How to Enclose the Body of the Sensor?</h3>
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 3rem;">The membrane enclosing the hydrogel chamber should be soft but not
+                        stretchable. Or the deformation of gels would be wasted in stretching it out.</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/topMemQues@6x.png" alt="" style="width: 25%;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="resources/img/valve/topMemFab@6x.png" alt="" style="width: 80%;">
+                </div>
+                <div class="col">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <p style="margin-top: 3rem;">As a result, in the fabrication process, I tried to embed the gauze
+                            into the top membrane to restrain its stretchability.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 3rem; margin-bottom: 1rem;">Here is the video of the fabrication process of the top
+                membrane:</p>
+            <video src="resources/video/valve/topMem Fabrication.mp4" style="width: 100%;" controls></video>
+            <h3 style="margin-top: 4rem;">A Quick Wrap-up - Why Not?</h3>
+            <p>I know it can get a little overwhelming on comprehending what have been done in the Structural Design
+                part, so let's make it simple:</p>
+            <p>I designed the structure of the sensor, which uses two key structures (monostable membrane & U-shape
+                tube) to "translate" the physical deformation of humidity-responsive materials into a logic signal
+                (whether the "kink valve" forms).</p>
+            <p>Still complicated? Try it: when the humidity-responsive material swells, this structure will not allow
+                air to pass through it; and when the material shrinks, it'll allow air to pass.</p>
+            <p>Pretty easy, uhm? And now, we need the right humidity-responsive material to trigger this structure...
+            </p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>MATERIAL DESIGN</h2>
+            <h3>Material Requirements?</h3>
+            <p>After some mathematical calculations and experiments of the structure, the desirable hydrogel needs to
+                meet the following two requirements.</p>
+            <div class="row">
+                <div class="col">
+                    <h4>high swell ratio</h4>
+                    <div style="display: flex; align-items: center;">
+                        <p style="margin: 0px;">a swell ratio of around 180%</p>
+                        <img src="resources/img/valve/swellIcon.svg" alt=""
+                            style="height: 3rem; margin:0.5rem 0 0.5rem 2rem;">
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>mechanically robust</h4>
+                    <div style="display: flex; align-items: center;">
+                        <p style="margin: 0px;">can withstand 5.1kPa pressure</p>
+                        <img src="resources/img/valve/robustIcon.svg" alt="" style="height: 4rem; margin-left: 2rem;">
+                    </div>
+                </div>
+            </div>
+            <h3 style="margin-top: 2rem;">How to Make Gel?</h3>
+            <p>There are two ways to fabricate hydrogels, and I mainly experimented <span
+                    style="color: #c9da2b;">biopolymers</span>, because they are easier to make and do not depend on
+                expensive equipments.</p>
+            <div style="display: flex; align-items: center;">
+                <img src="resources/img/valve/gelMat2@6x.png" alt="" style="width: 100%; justify-content: center;">
+            </div>
+            <p style="margin-top: 1rem;">To be more specific, I tested two common biopolymers to see their properties.
+            </p>
+            <h4>gelatin</h4>
+            <div class="row" style="align-items: center;">
+                <div class="col-2">
+                    <p>gelatin - 10% 15% 20% 25% .etc</p>
+                </div>
+                <div class="col-8">
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/valve/gelatin@6x.png" alt=""
+                            style="width: 100%; justify-content: center;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <p>mechanically weak</p>
+                </div>
+            </div>
+
+            <h4 style="margin-top: 2rem;">κ-carrageenan</h4>
+            <div class="row" style="align-items: center;">
+                <div class="col-2">
+                    <p>carrageenan - 2% 4% 6% 8% .etc</p>
+                </div>
+                <div class="col-8">
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/valve/kala@6x.png" alt="" style="width: 100%; justify-content: center;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <p>swell little</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 3rem;">How to Make Gels Swell More & More Robust?</h3>
+            <p>Hydrogels are known for good synergy effects: adding different gels together can produce interesting
+                property enhancements. Based on the two common biopolymers above, I added <span
+                    style="color: #c9da2b;">locust bean gum</span> and <span style="color: #c9da2b;">tapioca</span> to
+                meet these two requirements.</p>
+            <div class="row">
+                <div class="col">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/tapioca.png" alt=""
+                            style="height: 8rem; justify-content: center;">
+                    </div>
+                    <p>tapioca is usually used to increase the swell ratio of gel mixtures</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/bean.png" alt="" style="height: 8rem; justify-content: center;">
+                    </div>
+                    <p>tapioca is usually used to increase the swell ratio of gel mixtures</p>
+                </div>
+            </div>
+
+            <h4>gelatin-based mixture</h4>
+            <div class="row" style="align-items: center;">
+                <div class="col-2">
+                    <p>gelatin : locust bean gum - 4:1 3:1 2:1 1:1 .etc</p>
+                </div>
+                <div class="col-8">
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/valve/gel_bean@6x.png" alt="" style="width: 100%; justify-content: center;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <p>swell little</p>
+                </div>
+            </div>
+            <div class="row" style="align-items: center;">
+                <div class="col-2">
+                    <p>gelatin : tapioca - 6:1 4:1 2:1 1:1 .etc</p>
+                </div>
+                <div class="col-8">
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/valve/gel_star@6x.png" alt="" style="width: 100%; justify-content: center;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <p>mechanically weak</p>
+                </div>
+            </div>
+            <h4 style="margin-top: 2rem;">κ-carrageenan-based mixture</h4>
+            <div class="row" style="align-items: center;">
+                <div class="col-2">
+                    <p>carrageenan : locust bean gum  - 4:1 3:1 2:1 1:1 .etc</p>
+                </div>
+                <div class="col-8">
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/valve/k_bean@6x.png" alt="" style="width: 100%; justify-content: center;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <p>swell little</p>
+                </div>
+            </div>
+            <div class="row" style="align-items: center;">
+                <div class="col-2">
+                    <p>carrageenan : tapioca  - 4:1 2:1 1:1 1:2 .etc</p>
+                </div>
+                <div class="col-8">
+                    <div style="display: flex; align-items: center;">
+                        <img src="resources/img/valve/k_star@6x.png" alt="" style="width: 96%; justify-content: center;">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <p>swell much & mechanically robust, but swell slow</p>
+                </div>
+            </div>
+            <h4 style="margin-top: 2rem;">material result</h4>
+            <p>6% κ-carrageenan : 1.5% tapioca meets the two desired material requirements, but it swells slowly.</p>
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col">
+                    <h4>challenge - 1</h4>
+                    <p>The gel swells slowly.</p>
+                    <div style="display: flex; align-items: center; justify-content: center; margin-top: 4rem;">
+                        <img src="resources/img/valve/swellCha_1@6x.png" alt="" style="width: 50%;">
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>solution - 1</h4>
+                    <p>Cast the gel into spherical shapes to achieve a larger absorb surface.</p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/swellSol_1@6x.png" alt="" style="width: 80%;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 2rem;">
+                <div class="col">
+                    <h4>challenge - 2</h4>
+                    <p>After casting, the hydrogel is in a hydrated state and needs to be further dehydrated to swell
+                        more.</p>
+                    <p>I tried to let the gel dry out naturally or accelerate the process by heating. But the gel will
+                        irreversibly collapse in days ⬇️.</p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/dryOut.png" alt="" style="width: 40%;">
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>solution - 2</h4>
+                    <p>Inspired by this work[12], I immersed the gel in <span style="color: #c9da2b;">glycerin</span> to
+                        dehydrate. It turned out that the gel can reach a stable dry-out state.</p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/swellSol_2@6x.png" alt="" style="width: 85%; margin-top: 4rem;">
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 4rem;">Embedded test</h3>
+            <div class="row">
+                <div class="col-5">
+                    <p style="margin-top: 6rem;">The valve can close in 30min, with a breakthrough pressure of 54kPa.
+                    </p>
+                </div>
+                <div class="col-7">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="resources/img/valve/pressureTst.png" alt=""
+                            style="width: 100%; justify-content: center;">
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 2rem;">Here is the video of the fabrication process of the hydrogel material and the
+                embedded-test:</p>
+            <video src="resources/video/valve/material Fabrication+embeded test.mp4" style="width: 100%;"
+                controls></video>
+
+
+            <h3 style="margin-top: 4rem;">Limitations & Solutions</h3>
+            <h4>swelling speed</h4>
+            <div class="row" style="margin-bottom: 3rem;">
+                <div class="col">
+                    <p>To make the gel swell faster and to a greater extent, I optimized aspects in terms of materials
+                        (κ-carrageenan & tapioca) and structures (sphere balls). However, the gel still swells quite
+                        slowly (30min).</p>
+                    <p>On the other hand, researchers have proposed ways to fabricate fast-swelling hydrogels using
+                        <span style="color: #c9da2b;">synthetic polymers</span>. [13]
+                    </p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; justify-content: center;margin-top: 2rem; ">
+                        <img src="resources/img/valve/limitation_1@6x.png" alt=""
+                            style="width: 75%; justify-content: center;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Research reports a porous, robust, and fast-swelling hydrogel material, which fits all
+                        requirements (swell ratio & mechanically robust), but I failed to replicate it due to its
+                        complicated fabrication of synthetic polymers. [13] </p>
+                    <p>Nevertheless, it is clear that such material is realizable.</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; justify-content: center;margin-top: 1.5rem; ">
+                        <img src="resources/img/valve/limitation_2@6x.png" alt=""
+                            style="width: 85%; justify-content: center;">
+                    </div>
+                </div>
+            </div>
+            <h4 style="margin-top: 4rem;">deswelling speed</h4>
+            <div class="row" style="margin-bottom: 3rem;">
+                <div class="col">
+                    <p>The gel's deswelling speed is even slower and would take hours to fully dry. However, this speed
+                        is limited by the gel-swelling dynamics. Therefore it is hard to make alternations to the
+                        material itself to enable it deswell faster. [14]</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; justify-content: center;margin-top: 1rem; ">
+                        <img src="resources/img/valve/limitation_3@6x.png" alt=""
+                            style="width: 85%; justify-content: center;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>However, researches still find ways of triggerable deswelling: adding chemicals, changing PH,
+                        heating, etc. [13]</p>
+                    <p>One possible solution: soft polyimide heat film can be embedded to accelerate deswelling ➡️.</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; justify-content: center;margin-top: 1rem; ">
+                        <img src="resources/img/valve/limitation_4.svg" alt=""
+                            style="width: 25%; justify-content: center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>INNOVATIONS</h2>
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 4.2rem;">➊ There are few researches on physical intelligent soft humidity
+                        sensors that receive energy from the environment.</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; justify-content: center; ">
+                        <img src="resources/img/valve/innovation_1@6x.png" alt=""
+                            style="width: 80%; justify-content: center;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 6rem;">❷ Traditionally, responsive materials are directly used to actuate,
+                        leading to limited mechanical properties.</p>
+                    <img src="resources/img/valve/Inno_tradition_1@6x.png" alt=""
+                        style="width: 80%; justify-content: center;">
+
+                </div>
+                <div class="col">
+                    <div
+                        style="display: flex; flex-direction: column;justify-content: center;margin-top: 5rem; align-items: center;">
+                        <img src="resources/img/valve/Inno_tradition_2@6x.png" alt=""
+                            style="width: 72%; justify-content: center;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 6rem;">However, <i>MoistValve</i> explores a new diagram of the responsive
+                        shape-changing interface: it decouples the sensing and actuating part.</p>
+                </div>
+                <div class="col">
+                    <div
+                        style="display: flex; flex-direction: column;justify-content: center;margin-top: 5rem; align-items: center;">
+                        <img src="resources/img/valve/Inno_tradition_3@6x.png" alt=""
+                            style="width: 70%; justify-content: center;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 4rem;">
+                <div class="col">
+                    <p>This is because <i>MoistValve</i> uses the small deformation of hydrogels to control pneumatic
+                        terminals with better actuation abilities.</p>
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/valve/Inno_new_1@6x.png" alt=""
+                            style="width: 70%; justify-content: center; margin-top: 1.2rem;">
+                    </div>
+                </div>
+                <div class="col">
+                    <p>an analogy is the relay: it uses a small current to control a larger current.</p>
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/valve/Inno_new_2@6x.png" alt=""
+                            style="width: 70%; justify-content: center; margin-top: 2rem;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>APPLICATIONS</h2>
+            <h3>Pressure Ulcer Prevention Mattress</h3>
+            <h4>background</h4>
+            <p>Pressure ulcers (PU) are injuries to the skin and underlying tissue caused by prolonged pressure to the
+                skin. Deformation is the main cause of PU. Moisture, however, can accelerate PU formation. [15] </p>
+            <div
+                style="display: flex; flex-direction: column;justify-content: center; align-items: center; margin: 2rem 0 2rem 0;">
+                <img src="resources/img/valve/pu_bg@6x.png" alt="" style="width: 70%; justify-content: center;">
+            </div>
+            <h4 style="margin-top: 2rem;">current solutions</h4>
+            <div class="row" style="margin-top: 4rem;">
+                <div class="col">
+                    <p>Current PU preventing mattresses use alternate inflation and deflation to redistribute pressure.
+                        However, most of them <span style="color: #c9da2b;">cannot respond to moisture</span>. This is
+                        because current humidity sensors are big and rigid, thus can damage the skin. </p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/valve/pu_curSol@6x.png" alt=""
+                            style="width: 75%; justify-content: center; margin-top: 2rem;">
+                    </div>
+                </div>
+            </div>
+            <h4 style="margin-top: 2rem;">ergonomic analysis</h4>
+            <p>Humidity makes the skin PU-prone by following two aspects.</p>
+            <div class="row" style="margin-top: 2rem;">
+                <div class="col">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/valve/pu_ergo_ana_1@6x.png" alt=""
+                            style="height: 6rem; justify-content: center; margin-top: 0rem;">
+                    </div>
+                    <p style="margin-top: 2rem;">Higher COF (μ) will lead to higher friction force (shear) to skin.</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/valve/pu_ergo_ana_2@6x.png" alt=""
+                            style="height: 5.4rem; justify-content: center; margin-top: 0.6rem;">
+                    </div>
+                    <p style="margin-top: 2rem;">Humidity makes skin PU-prone due to higher tissue temperature.</p>
+                </div>
+            </div>
+            <h4 style="margin-top: 2rem;">solution with the <i>MoistValve</i></h4>
+            <p>I want to use MoistValve to sense humidity and <span style="color: #c9da2b;">redistribute pressure out of
+                    places with high humidity degree</span>.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/valve/pu_ergo_1@6x.png" alt=""
+                    style="width: 75%; justify-content: center;margin: 2rem 0 2rem 0;">
+            </div>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/valve/pu_design_1@6x.png" alt=""
+                    style="width: 75%; justify-content: center;margin: 2rem 0 2rem 0;">
+            </div>
+            <p>I wanted to embed humidity-responsive air chambers and traditional alternative chambers together in one
+                mattress. As a result, I fabricated a multi-layered mattress structure.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/valve/pu_design_3@6x.png" alt=""
+                    style="width: 75%; justify-content: center;margin: 1rem 0 2rem 0;">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 2rem;">Moreover, some basic logic can be realized by the <i>MoistValve</i>.
+                    </p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/valve/pu_logic@6x.png" alt=""
+                            style="width: 80%; justify-content: center;">
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/valve/pu_design_4@6x.png" alt=""
+                    style="width: 75%; justify-content: center;margin: 1rem 0 2rem 0;">
+            </div>
+
+            <h3>Smart Louver</h3>
+            <p>The MoistValve can also be used to design smart exterior surfaces of buildings, such as smart louvers
+                that can automatically close when raining.</p>
+            <p>To actuate the movement of flower's stem, I used a variant of a Mckibben muscle ⬇️.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/valve/louver_design@6x.png" alt=""
+                    style="width: 75%; justify-content: center;margin: 0 0 2rem 0;">
+            </div>
+
+            <h3>Flower Watering Toy Blocks</h3>
+            <p>I also used the MoistValve to design toy blocks that can sense the watering action and actuate the
+                movement of pneumatic flowers.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/valve/flower_design@6x.png" alt=""
+                    style="width: 85%; justify-content: center;margin: 0 0 1rem 0;">
+            </div>
+            <p>There can also be multiple water-adding cups, to realize some basic logic.</p>
+            <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                <img src="resources/img/valve/flower_design_2@6x.png" alt=""
+                    style="width: 65%; justify-content: center;">
+            </div>
+        </div>
+        <div style="margin-bottom: 6rem;">
+            <h2>FUTURE WORK</h2>
+            <p>One major future work is fabricating <span style="color: #c9da2b;">fast-responsive and mechanically robust hydrogel</span> and embedding it in
+                the MoistValve for evaluation.</p>
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 2rem;">Besides, the shape-changing materials can not only respond to humidity, but <span style="color: #c9da2b;">temperature, PH, light, etc</span>.
+                        I will further explore all these potentials.</p>
+                </div>
+                <div class="col">
+                    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <img src="resources/img/valve/futurework@6x.png" alt=""
+                            style="width: 55%; justify-content: center;margin: 0 0 2rem 0;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 6rem;">
+            <h2>REFERENCES</h2>
+            <p>[1] Xu, S. et al. (2018) “Biocompatible Soft Fluidic Strain and force sensors for wearable devices,”
+                Advanced Functional Materials, 29(7), p. 1807058. Available at: https://doi.org/10.1002/adfm.201807058.
+            </p>
+            <p>[2] Sitti, M. (2021) “Physical Intelligence as a new paradigm,” Extreme Mechanics Letters, 46, p. 101340.
+                Available at: https://doi.org/10.1016/j.eml.2021.101340. </p>
+            <p>[3] van Laake, L.C. et al. (2022) “A fluidic relaxation oscillator for reprogrammable sequential
+                actuation in soft robots,” Matter, 5(9), pp. 2898–2917. Available at:
+                https://doi.org/10.1016/j.matt.2022.06.002. </p>
+            <p>[4] Zhao, Y. et al. (2022) “Twisting for soft intelligent autonomous robot in unstructured environments,”
+                Proceedings of the National Academy of Sciences, 119(22). Available at:
+                https://doi.org/10.1073/pnas.2200265119. </p>
+            <p>[5] Wang, W. et al. (2017) “Harnessing the hygroscopic and biofluorescent behaviors of genetically
+                tractable microbial cells to design biohybrid wearables,” Science Advances, 3(5). Available at:
+                https://doi.org/10.1126/sciadv.1601984. </p>
+            <p>[6] Correa, D. et al. (2015) “3D-printed wood: Programming hygroscopic material transformations,” 3D
+                Printing and Additive Manufacturing, 2(3), pp. 106–116. Available at:
+                https://doi.org/10.1089/3dp.2015.0022. </p>
+            <p>[7] Rivera, M.L. et al. (2020) “Hydrogel-Textile Composites,” Extended Abstracts of the 2020 CHI
+                Conference on Human Factors in Computing Systems [Preprint]. Available at:
+                https://doi.org/10.1145/3334480.3382788. </p>
+            <p>[8] Bakarich, S.E. et al. (2015) “3D/4D Printing Hydrogel Composites: A pathway to functional devices,”
+                MRS Advances, 1(8), pp. 521–526. Available at: https://doi.org/10.1557/adv.2015.9.</p>
+            <p>[9] Czugala, M. et al. (2011) “Materials science: The key to revolutionary breakthroughs in micro-fluidic
+                devices,” SPIE Proceedings [Preprint]. Available at: https://doi.org/10.1117/12.895330. </p>
+            <p>[10] Yu, Q. et al. (2001) “Responsive biomimetic hydrogel valve for Microfluidics,” Applied Physics
+                Letters, 78(17), pp. 2589–2591. Available at: https://doi.org/10.1063/1.1367010. </p>
+            <p>[11] Luo, K. et al. (2019) “Soft kink valves,” Journal of the Mechanics and Physics of Solids, 131, pp.
+                230–239. Available at: https://doi.org/10.1016/j.jmps.2019.07.008. </p>
+            <p>[12] Sason, G. and Nussinovitch, A. (2018) “Characterization of κ-carrageenan gels immersed in ethanol
+                solutions,” Food Hydrocolloids, 79, pp. 136–144. Available at:
+                https://doi.org/10.1016/j.foodhyd.2017.12.025. </p>
+            <p>[13] Choudhary, H. and Raghavan, S.R. (2022) “Superfast-expanding porous hydrogels: Pushing new frontiers
+                in converting chemical potential into useful mechanical work,” ACS Applied Materials &amp; Interfaces,
+                14(11), pp. 13733–13742. Available at: https://doi.org/10.1021/acsami.2c00645. </p>
+            <p>[14] Bertrand, T. et al. (2016) “Dynamics of swelling and drying in a spherical gel,” Physical Review
+                Applied, 6(6). Available at: https://doi.org/10.1103/physrevapplied.6.064010. </p>
+            <p>[15] Kottner, J. et al. (2018) “Microclimate: A critical review in the context of pressure ulcer
+                prevention,” Clinical Biomechanics, 59, pp. 62–70. Available at:
+                https://doi.org/10.1016/j.clinbiomech.2018.09.010. </p>
+        </div>
+
+    </div>
+    <div style="margin: 8rem 0 0 0; padding: 0 0 2rem 0;">
+        <p style="text-align: center;">© 2023 All rights reserved by Yuecheng Peng. </p>
+    </div>
+
+
+    <script>
+        drawIcon(window.innerWidth / 1728 * 60, "headerIcon", false, true);
+        let outline = new DocumentOutline({
+            backgroundColor: '#2c2c2c',
+            textColor: 'white',
+            textColorLight: 'lightgrey',
+            accentColor: '#c9da2b',
+            defaultOpen: false
+        });
+
+        d3.select(".outline-nav")
+            .style("z-index", "99")
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="resources/img/tabIcon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- outline Import CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/outline.css">
+    <!-- outline Import the library -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/AngeloFaella/DocumentOutline@1.0/DocumentOutline.js"></script> -->
+    <script src="js/DocumentOutline.js"></script>
+
+
+    <title>Sustain KG</title>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body style="margin: 0 4rem 0 4rem;">
+    <script src="js/iconDraw.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <!-- header -->
+    <div class="glassmorphismHeader" style="display: flex; justify-content: space-between; position: sticky; top: 0;">
+        <!-- icon & name -->
+        <div style="display: flex; align-items: center; margin: 0 0 0 0.5rem;">
+            <div id="headerIcon"></div>
+            <p class="headerP" style="margin: 0;">Yuecheng Peng</p>
+        </div>
+
+        <!-- pages -->
+        <div style="display: flex; align-items: center; margin: 0 0.5rem 0 0">
+            <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect" href="home.html"> Yuecheng's Garden of Design</a>
+            </div>
+            <!-- <div class="headerPageDivBorder">
+                <a class="headerPageP cannotselect">Grad Works</a>
+            </div> -->
+            <div>
+                <a class="headerPageP cannotselect" href="aboutme.html" target="_self">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 10rem 20rem 0rem 20rem;">
+        <div style="margin-bottom: 10rem;">
+            <p class="designName" style="color: #89b57a;">SUSTAIN - KG</p>
+            <p class="designName" style="font-size:3rem; margin-bottom: 5rem;">Knowledge Graph Tool for Sustainable
+                Education</p>
+            <p>Oct 2021 - Apr 2022</p>
+            <p>Project completed at Zhejiang University with Yufan Xi, Xuanhui Liu</p>
+            <p>Role : web designer, front-end & back-end developer, literary researcher</p>
+            <p style="text-decoration-line: underline;">The paper of this work has been submitted to <i>the Journal of
+                    Cleaner Production on Jan, 2023.</i></p>
+        </div>
+
+        <div style="margin-bottom: 6rem;">
+            <h2>BACKGROUND</h2>
+            <p>Higher education places considerable emphasis on developing sustainability competence in Education for
+                Sustainable Development (ESD) to accelerate the progress of achieving Sustainable Development Goals
+                (SDGs). Although research on mapping sustainability within tertiary curricula raises students'
+                sustainability awareness, <span style="color: #89b57a;">it is still challenging for students to adopt a
+                    systematic perspective in the problem-solving process for sustainable solutions</span>. Integrating
+                interdisciplinary knowledge and SDGs into ESD is key to developing sustainability competence in teaching
+                and learning activities. </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+            <h2>SOLUTION & DESIGN</h2>
+            <p>In an effort to support students applying interdisciplinary knowledge to deal with complex sustainability
+                issues, we build a knowledge graph which contains <span>entities and relations about the knowledge of
+                    interdisciplinary knowledge, sustainability solutions and SDGs</span>. We instantiate the knowledge
+                graph and develop a tool–<span style="color: #89b57a;">Sustain-KG</span>, helping students tackle
+                sustainability issues relevant to SDGs in the curriculum.</p>
+            <p>To be more specific, Sustain-KG is a online knowledge graph tool that helps students make effective use
+                of structured knowledge to deal with sustainability problems. With this tool, students are able to <span
+                    style="color: #89b57a;">gain well-structured knowledge in sustainability problem-solving
+                    process.</span></p>
+            <p>view the demonstration of our system ⬇️</p>
+        </div>
+
+        <div>
+            <video src="resources/video/sustain/sustainKGDemo.mp4" style="width: 100%;" controls></video>
+        </div>
+    </div>
+    <div style="margin: 8rem 0 0 0; padding: 0 0 2rem 0;">
+        <p style="text-align: center;">© 2023 All rights reserved by Yuecheng Peng. </p>
+    </div>
+
+
+    <script>
+        drawIcon(window.innerWidth / 1728 * 60, "headerIcon", false, true);
+        let outline = new DocumentOutline({
+            backgroundColor: '#2c2c2c',
+            textColor: 'white',
+            textColorLight: 'lightgrey',
+            accentColor: '#89b57a',
+            defaultOpen: false
+        });
+
+        d3.select(".outline-nav")
+            .style("z-index", "99")
+    </script>
+
+</body>
+
+</html>
