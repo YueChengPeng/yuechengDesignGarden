@@ -15,7 +15,9 @@
 
     <script src="https://d3js.org/d3.v6.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <style>
 
+    </style>
 </head>
 
 <body style="margin: 0 4rem 0 4rem;">
@@ -93,13 +95,168 @@
             </p>
         </div>
 
-        <div style="display: flex; justify-content: center; margin: 8rem 0 4rem 0;">
+        <div
+            style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 8rem 0 4rem 0;">
             <div class="gradient-border" id="welcomeBox">
                 <h4 style="padding: 1rem 2rem 1rem 2rem">Welcome to Yuecheng's Garden!</h4>
             </div>
+            <div class="gardenSwitchBg" style="margin: 3rem 0 2rem 0;">
+                <div style="display: flex;">
+                    <p id="gardenView" style="margin: 1rem 2rem 1rem 3rem; opacity: 1; cursor: pointer;" onclick="changeToGardenView();">
+                        Garden View</p>
+                    <p id="listView" style="margin: 1rem 3rem 1rem 2rem; opacity: .2; cursor: pointer;" onclick="changeToListView()">List
+                        View</p>
+                </div>
+            </div>
         </div>
+
+        <div id="listVizDiv"
+            style="margin: 0 20rem 0 20rem; display: none; transform: translate(100px, 0); opacity: 0;">
+            <h2 style="margin-bottom: 6rem;">Featured Projects</h2>
+
+            <a class="row" style="margin: 4rem 0 4rem 0;" href="valve.html">
+                <div class="col-9">
+                    <h3 style="color: #c9da2b;">MOISTVALVE</h3>
+                    <h3>A Moisture Sensory Soft Valve</h3>
+                    <p>Material Design | Soft Sensors | Ergonomics</p>
+                    <p>Overview: From the technology perspective, I explore the possibilities of using smart responsive
+                        materials in the pneumatic context. This work presents a smart soft pneumatic valve that is
+                        water-responsive. It can realize logic control based on environmental humidity degree without
+                        the need for electricity, hard sensors or computer control.</p>
+                    <p>Personal Project, Jul 2022 - Oct 2022</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/valveCover.png" alt="" style="width: 70%; margin: 2rem 0 0 4rem;">
+                </div>
+            </a>
+
+            <a class="row" style="margin: 4rem 0 4rem 0;"
+                href="https://yuechengpeng.github.io/Fengxian_Visualization_Project_2022/project/">
+                <div class="col-9">
+                    <h3 style="color: #ffc000;">WHEN WIND BLOWS</h3>
+                    <h3>A Visual Story of an Outrageous Social Event</h3>
+                    <p>Data Visualization | Social Issue</p>
+                    <p>Overview: A data visualization of public opinions on social platforms after a video of a mother
+                        of eight being locked with a chain around her neck went viral. Through this work, I want to call
+                        for more awareness and actions towards human trafficking and many other social issues alike.</p>
+                    <p>Personal Project, Feb 2022 - Jun 2022</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/windCover.png" alt="" style="width: 150%; margin: 4rem 0 0 0;">
+                </div>
+            </a>
+
+            <a class="row" style="margin: 4rem 0 4rem 0;" href="sugar.html">
+                <div class="col-9">
+                    <h3 style="color: #e89056;">48°C SUGAR</h3>
+                    <h3>Material Redesign of Traditional Sugar Figure Blowing Art</h3>
+                    <p>Material design | Human Food Interaction | User Research & Testing</p>
+                    <p>Overview: To preserve and revive the sugar figure blowing art, I want to attract GenZ by allowing
+                        them to learn about this tradition through hands-on experience. Traditionally, this art features
+                        a steep learning curve, and thus I design a new sugar material with a lower glass transition
+                        temperature that makes this art easier to learn for novices. This new material allows safe and
+                        easy diy experience and brings about many interesting interaction capacitites.</p>
+                    <p>Personal Project, Aug 2022 - Oct 2022</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/sugarCover.png" alt="" style="width: 100%; margin: 6rem 0 0 2rem;">
+                </div>
+            </a>
+
+            <a class="row" style="margin: 4rem 0 4rem 0;" href="magpaper.html">
+                <div class="col-9">
+                    <h3 style="color: #bfbfbf;">MAGPAPER</h3>
+                    <h3>Cheap and Reconfigurable Rapid Prototyping of Haptic Interface Based on Paper</h3>
+                    <p>Personal Fabrication in HCI | Material Design | Rapid Prototyping</p>
+                    <p>Overview: Although haptic feeling is an important aspect of prototyping, student designers may
+                        find it difficult to incorporate haptic feedback into their demos. Based on magnetic elastomers
+                        and paper, I design an easy-to-fabricate, cheap, customizable, and reconfigurable physical
+                        interface toolkit with haptic feedback. It allows designers to easily include haptic feedback in
+                        their prototypes.</p>
+                    <p>Personal Project, Nov 2022 - Dec 2022</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/magpaperCover.png" alt="" style="width: 100%; margin: 6rem 0 0 1rem;">
+                </div>
+            </a>
+
+            <h2 style="margin:12rem 0 6rem 0;">Other Projects</h2>
+
+            <a class="row" style="margin: 4rem 0 4rem 0;" href="fluid.html">
+                <div class="col-9">
+                    <h3 style="color: #6f65e0;">COFLUID</h3>
+                    <h3>Rapid Prototyping of Fluidic Interface</h3>
+                    <p>Personal Fabrication in HCI | Rapid Prototyping</p>
+                    <p>Overview: CoFluid is an easy and low-cost fabrication process of fluidic channels and a
+                        compatible soft valve. It makes it easy for designers to include fluid in prototyping, providing
+                        novel visual feedback and interesting interactions.</p>
+                    <p>Group Project with Haotian Chen, Ziqing Zheng, Longxuan Chen, Zeping Jin in ZJU<br>
+                        Role: structure & material developer, literary researcher<br>
+                        Aug 2022 - Oct 2022</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/fluidCover.png" alt="" style="width: 150%; margin: 6rem 0 0 1rem;">
+                </div>
+            </a>
+
+            <a class="row" style="margin: 4rem 0 4rem 0;" href="carrot.html">
+                <div class="col-9">
+                    <h3 style="color: #e89056;">CARROTS WILL LEAD THE WAY</h3>
+                    <h3>Game Demo</h3>
+                    <p>Arduino | RaspberryPi | Unity | Computer Vision | Game Design</p>
+                    <p>Overview: Carrots will lead the way ​is a game in which players use bricks of different colors to
+                        guide a rabbit out of the puzzle. This game is an attempt of combining Arduino(C),
+                        RaspberryPi(Python), and Unity(C#) in prototyping.</p>
+                    <p>Group Project with Xiuyang Wu, Zhiyu Xie in ZJU<br>
+                        Role: team leader, C# developer, scene & UI & story designer<br>
+                        May 2022</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/carrotCover.png" alt="" style="width: 150%; margin: 6rem 0 0 0;">
+                </div>
+            </a>
+
+            <a class="row" style="margin: 4rem 0 4rem 0;" href="sustain.html">
+                <div class="col-9">
+                    <h3 style="color: #89b57a;">SUSTAINKG</h3>
+                    <h3>Knowledge Graph Tool for Sustainable Education</h3>
+                    <p>Data Visualization | Sustainable Education</p>
+                    <p>Overview: It is challenging for students to adopt a systematic perspective in the problem-solving
+                        process for sustainable solutions. In respond to this challenge, we develop Sustain-KG , an
+                        online knowledge graph tool that helps students to gain well-structured knowledge in
+                        sustainability problem-solving process.</p>
+                    <p>Group Project with Yufan Xi, Xuanhui Liu in ZJU<br>
+                        Role: web designer, front-end & back-end developer, academic researcher<br>
+                        Oct 2021 - Apr 2022</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/sustainCover.png" alt="" style="width: 90%; margin: 6rem 0 0 4rem;">
+                </div>
+            </a>
+
+            <a class="row" style="margin: 4rem 0 4rem 0;" href="marvel.html">
+                <div class="col-9">
+                    <h3 style="color: #e72718;">MARVEL UNIVERSE</h3>
+                    <h3>Marvel Cinemic Universe Visualization</h3>
+                    <p>Data Visualization | Back-end Development</p>
+                    <p>Overview: Sometimes it's a little challenging to get the relationships of different characters in
+                        the Marvel Cinemic Universe right. This is a data visualization project that reveals the
+                        relationship of different Marvel characters, their personal attributes, and other fun facts.</p>
+                    <p>Group Project with Haotian Chen, Xinli Chen in ZJU<br>
+                        Role: team leader, backend developer, interaction designer<br>
+                        Nov 2021 - Dec 2021</p>
+                </div>
+                <div class="col">
+                    <img src="resources/img/marvelCover.png" alt="" style="width: 100%; margin: 5rem 0 0 2rem;">
+                </div>
+            </a>
+
+
+
+        </div>
+
         <!-- 图注 -->
-        <div style="margin: 0 0 4rem 0;">
+        <div id="gardenVizDiv" style="margin: 0 0 4rem 0; display: block;">
             <p style="text-align: center;">each flower represent one project</p>
 
             <div style="display: flex; align-items: center; justify-content: center;">
@@ -129,10 +286,9 @@
                     <p style="margin: 0;">Project Start & End</p>
                 </div>
             </div>
+            <div id="gardenSvg" style="display: flex; justify-content: center;"></div>
         </div>
 
-
-        <div id="gardenSvg" style="display: flex; justify-content: center;"></div>
     </div>
 
     <!-- grad div -->
@@ -153,7 +309,8 @@
         style="display: none; width: 40rem; padding: 2.5rem 2.5rem 2.5rem 2.5rem; position: absolute; left:4rem">
         <div style="display: flex; align-items: center;">
             <div style="margin: 0 0rem 0 0;">
-                <h2 id="projectTooltipName" style="color: #c9da2b; font-size: 2.4rem; margin-bottom: 1rem;">MOISTVALVE</h2>
+                <h2 id="projectTooltipName" style="color: #c9da2b; font-size: 2.4rem; margin-bottom: 1rem;">MOISTVALVE
+                </h2>
                 <h2 id="projectTooltipExplain">MOISTURE SENSORY SOFT VALVE</h2>
                 <p id="projectTooltipSkills">Material Design | Soft Sensors | Ergonomics</p>
             </div>
@@ -277,7 +434,7 @@
 
                 // display grad div
                 d3.select("#gradDiv")
-                .transition()
+                    .transition()
                     .delay(500)
                     .style("display", "block")
                     .on("end", () => {
@@ -330,6 +487,78 @@
         }
     </script>
 
+    <!-- change view state -->
+    <script>
+        function changeToGardenView() {
+            d3.select("#listView")
+                .transition()
+                .duration(1000)
+                .style("opacity", ".2")
+
+
+            d3.select("#gardenView")
+                .transition()
+                .duration(1000)
+                .style("opacity", "1")
+
+            d3.select("#listVizDiv")
+                .transition()
+                .duration(600)
+                .style("transform", "translate(100px,0)")
+                .style("opacity", "0")
+                .on('end', () => {
+                    d3.select("#listVizDiv")
+                        .style("display", "none")
+                });
+
+            d3.select("#gardenVizDiv")
+                .transition()
+                .delay(500)
+                .style("display", "block")
+                .on("end", () => {
+                    d3.select("#gardenVizDiv")
+                        .transition()
+                        .duration(600)
+                        .style("transform", "translate(0,0)")
+                        .style("opacity", "1")
+                })
+        }
+
+        function changeToListView() {
+            d3.select("#listView")
+                .transition()
+                .duration(1000)
+                .style("opacity", "1")
+
+            d3.select("#gardenView")
+                .transition()
+                .duration(1000)
+                .style("opacity", ".2")
+
+            d3.select("#gardenVizDiv")
+                .transition()
+                .duration(600)
+                .style("transform", "translate(-100px,0)")
+                .style("opacity", "0")
+                .on('end', () => {
+                    d3.select("#gardenVizDiv")
+                        .style("display", "none")
+                });
+
+            d3.select("#listVizDiv")
+                .transition()
+                .delay(500)
+                .style("display", "block")
+                .on("end", () => {
+                    d3.select("#listVizDiv")
+                        .transition()
+                        .duration(600)
+                        .style("transform", "translate(0,0)")
+                        .style("opacity", "1")
+                })
+        }
+    </script>
+
     <!-- draw garden -->
     <script>
         // draw college illustration
@@ -369,25 +598,24 @@
             `Overview: It is challenging for students to adopt a systematic perspective in the problem-solving process for sustainable solutions. In respond to this challenge, we develop Sustain-KG , an online knowledge graph tool that helps students to gain well-structured knowledge in sustainability problem-solving process.`,
             "Overview: Sometimes it's a little challenging to get the relationships of different characters in the Marvel Cinemic Universe right. This is a data visualization project that reveals the relationship of different Marvel characters, their personal attributes, and other fun facts."]
         let prjTime = ["Personal Project, Dec 2022 - ",
-            `Personal Project, Aug 2022 - Oct 2022`,
+            `Personal Project, Nov 2022 - Dec 2022`,
             "Personal Project, Aug 2022 - Oct 2022",
             "Personal Project, Jul 2022 - Oct 2022",
             `Group Project with Haotian Chen, Ziqing Zheng, Longxuan Chen, Zeping Jin in ZJU<br>
                 Role: structure & material developer, literary researcher<br>
-                Aug 2022 - Oct 2022
-                `,
+                Aug 2022 - Oct 2022`,
             "Personal Project, Feb 2022 - Jun 2022",
             `Group Project with Xiuyang Wu, Zhiyu Xie in ZJU<br>
                 Role: team leader, C# developer, scene & UI & story designer<br>
                 May 2022`,
             `Group Project with Yufan Xi, Xuanhui Liu in ZJU<br>
                 Role: web designer, front-end & back-end developer, academic researcher<br>
-                May 2022`,
+                Oct 2021 - Apr 2022`,
             `Group Project with Haotian Chen, Xinli Chen in ZJU<br>
                 Role: team leader, backend developer, interaction designer<br>
-                Oct 2021 - Apr 2022`]
+                Nov 2021 - Dec 2021`]
         let prjLinkPage = ['pu', "magpaper", "sugar", "valve", "fluid", "wind", "carrot", "sustain", "marvel"];
-        
+
 
 
         // 改变tooltip内容函数
@@ -481,12 +709,11 @@
                                 .style("opacity", "0")
                                 .style("display", "none")
                         })
-                        .on("click", function (d, i){
-                            if(prjLinkPage[prjIndex] == "wind")
-                            {
-                                window.location.assign(`https://yuechengpeng.github.io/Fengxian_Visualization_Project_2022/project/`) 
-                            }else{
-                                window.location.assign(`${prjLinkPage[prjIndex]}.html`) 
+                        .on("click", function (d, i) {
+                            if (prjLinkPage[prjIndex] == "wind") {
+                                window.location.assign(`https://yuechengpeng.github.io/Fengxian_Visualization_Project_2022/project/`)
+                            } else {
+                                window.location.assign(`${prjLinkPage[prjIndex]}.html`)
                             }
                         })
                 }
